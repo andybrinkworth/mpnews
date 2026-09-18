@@ -4,7 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
-<title>Marketplace Intelligence Briefing</title>
+<title>MP Newsfeed</title>
+
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#14161A">
+<meta name="apple-mobile-web-app-title" content="MP Newsfeed">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <style>
   :root {
     --ink: #14161A;
@@ -147,6 +158,46 @@
   .search-row input:focus-visible {
     outline: 2px solid var(--accent);
     outline-offset: 1px;
+  }
+
+  .search-nav {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 1.5rem 0.65rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.82rem;
+    color: var(--ink-soft);
+  }
+
+  .search-nav.hidden { display: none; }
+
+  .search-nav button {
+    font-family: inherit;
+    font-size: 0.9rem;
+    line-height: 1;
+    color: var(--ink);
+    background: var(--paper-soft);
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    padding: 0.35rem 0.6rem;
+    cursor: pointer;
+  }
+
+  .search-nav button:hover { background: var(--rule); }
+  .search-nav button:disabled { opacity: 0.4; cursor: default; }
+
+  mark.search-hit {
+    background: var(--accent-soft);
+    color: var(--ink);
+    border-radius: 2px;
+    padding: 0 0.05rem;
+  }
+
+  mark.search-hit.current {
+    background: var(--accent);
+    color: #fff;
   }
 
   .tags-toggle {
@@ -449,6 +500,11 @@
     <input type="text" id="search-input" placeholder="Search this feed by keyword or tag&hellip;" autocomplete="off">
     <button class="tags-toggle" id="tags-toggle" aria-haspopup="true" aria-expanded="false">Tags</button>
   </div>
+  <div class="search-nav hidden" id="search-nav">
+    <button id="search-prev" aria-label="Previous match">&uarr;</button>
+    <span id="search-count">0 of 0</span>
+    <button id="search-next" aria-label="Next match">&darr;</button>
+  </div>
 </div>
 
 <div class="tag-drawer-backdrop" id="tag-drawer-backdrop"></div>
@@ -489,8 +545,14 @@
   const tagDrawerBackdrop = document.getElementById("tag-drawer-backdrop");
   const tagDrawerList = document.getElementById("tag-drawer-list");
   const tagDrawerClose = document.getElementById("tag-drawer-close");
+  const searchNav = document.getElementById("search-nav");
+  const searchCount = document.getElementById("search-count");
+  const searchPrevBtn = document.getElementById("search-prev");
+  const searchNextBtn = document.getElementById("search-next");
 
   let observer = null;
+  let searchHits = [];       // <mark> elements, in document order, for the current query
+  let currentHitIndex = -1;
 
   function stripTags(html) {
     return html.replace(/<[^>]*>/g, " ");
@@ -506,6 +568,46 @@
       .replace(/&gt;/g, ">")
       .replace(/&quot;/g, '"')
       .replace(/&#39;/g, "'");
+  }
+
+  // Wraps every occurrence of `query` inside root's text nodes in a
+  // <mark>, returning the marks in document order. Operates on already-
+  // parsed DOM text (not raw HTML strings), so entities are naturally
+  // already decoded and tags can't get corrupted.
+  function highlightTextNodes(root, query) {
+    if (!query) return [];
+    const lowerQuery = query.toLowerCase();
+    const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null);
+    const textNodes = [];
+    let node;
+    while ((node = walker.nextNode())) {
+      if (node.parentNode && node.parentNode.tagName === "MARK") continue;
+      textNodes.push(node);
+    }
+
+    const marks = [];
+    textNodes.forEach(textNode => {
+      const text = textNode.textContent;
+      const lowerText = text.toLowerCase();
+      if (!lowerText.includes(lowerQuery)) return;
+
+      const frag = document.createDocumentFragment();
+      let lastIndex = 0;
+      let idx;
+      while ((idx = lowerText.indexOf(lowerQuery, lastIndex)) !== -1) {
+        if (idx > lastIndex) frag.appendChild(document.createTextNode(text.slice(lastIndex, idx)));
+        const mark = document.createElement("mark");
+        mark.className = "search-hit";
+        mark.textContent = text.slice(idx, idx + query.length);
+        frag.appendChild(mark);
+        marks.push(mark);
+        lastIndex = idx + query.length;
+      }
+      if (lastIndex < text.length) frag.appendChild(document.createTextNode(text.slice(lastIndex)));
+      textNode.parentNode.replaceChild(frag, textNode);
+    });
+
+    return marks;
   }
 
   // Fetches a feed's JSON only the first time its tab is opened, not upfront —
@@ -549,6 +651,8 @@
     filtered.sort((a, b) => (a.date < b.date ? 1 : -1));
 
     feedState[activeFeedId] = { filtered, shown: 0 };
+    searchHits = [];
+    currentHitIndex = -1;
     renderPanel(true);
   }
 
@@ -558,10 +662,13 @@
     const state = feedState[activeFeedId];
     if (!data || !state) return;
 
+    const query = (searchInput.value || "").trim();
+
     const cadence = data.cadence ? `<div class="cadence">${data.cadence}</div>` : "";
 
     if (!state.filtered.length) {
       panel.innerHTML = cadence + `<p class="empty">${data.entries.length ? "Nothing matches that search." : "No entries yet."}</p>`;
+      updateSearchNav();
       return;
     }
 
@@ -582,11 +689,21 @@
         ${e.link ? `<a class="read-more" href="${e.link}" target="_blank" rel="noopener">Read the full doc &rarr;</a>` : ""}
       `;
       list.appendChild(article);
+
+      if (query) {
+        searchHits.push(...highlightTextNodes(article, query));
+      }
     });
 
     state.shown += nextBatch.length;
 
     updateLoadMoreRow(panel, state);
+    updateSearchNav();
+
+    // First render of a fresh search: land on the first match.
+    if (fresh && query && searchHits.length && currentHitIndex === -1) {
+      goToHit(0);
+    }
   }
 
   // Infinite-scroll sentinel with a manual "Load more" fallback — either
@@ -684,6 +801,60 @@
   tagDrawerBackdrop.addEventListener("click", closeTagDrawer);
   document.addEventListener("keydown", e => {
     if (e.key === "Escape") closeTagDrawer();
+  });
+
+  // ---------- Search match navigation ----------
+
+  function updateSearchNav() {
+    const query = (searchInput.value || "").trim();
+    if (!query || !searchHits.length) {
+      searchNav.classList.add("hidden");
+      return;
+    }
+    searchNav.classList.remove("hidden");
+    searchCount.textContent = `${currentHitIndex + 1} of ${searchHits.length}`;
+  }
+
+  function goToHit(index) {
+    if (!searchHits.length) return;
+    if (currentHitIndex >= 0 && searchHits[currentHitIndex]) {
+      searchHits[currentHitIndex].classList.remove("current");
+    }
+    currentHitIndex = index;
+    const mark = searchHits[currentHitIndex];
+    mark.classList.add("current");
+    mark.scrollIntoView({ behavior: "smooth", block: "center" });
+    updateSearchNav();
+  }
+
+  function goToNextHit() {
+    const state = feedState[activeFeedId];
+    const atLastLoadedHit = currentHitIndex >= searchHits.length - 1;
+    const moreToLoad = state && state.shown < state.filtered.length;
+
+    if (atLastLoadedHit && moreToLoad) {
+      const beforeCount = searchHits.length;
+      renderPanel(false); // loads next batch, appends any new hits
+      if (searchHits.length > beforeCount) {
+        goToHit(beforeCount);
+        return;
+      }
+    }
+    goToHit(searchHits.length ? (currentHitIndex + 1) % searchHits.length : 0);
+  }
+
+  function goToPrevHit() {
+    if (!searchHits.length) return;
+    goToHit((currentHitIndex - 1 + searchHits.length) % searchHits.length);
+  }
+
+  searchNextBtn.addEventListener("click", goToNextHit);
+  searchPrevBtn.addEventListener("click", goToPrevHit);
+
+  searchInput.addEventListener("keydown", e => {
+    if (e.key !== "Enter") return;
+    e.preventDefault();
+    if (e.shiftKey) goToPrevHit(); else goToNextHit();
   });
 
   document.querySelectorAll(".tab-btn").forEach(btn => {

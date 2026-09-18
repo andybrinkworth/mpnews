@@ -7,9 +7,10 @@
  * THREE FEEDS, THREE FUNCTIONS:
  *   pushMarketplaceIntel()  — running Doc, twice weekly. WORKING.
  *   pushCompetitorWatch()   — running Doc, weekly (Fridays). WORKING.
- *   pushBookerGroupNews()   — creates a NEW Doc each run (Mondays).
- *                             STUB — see the comment on that function;
- *                             no real Doc exists yet to build against.
+ *   pushBookerGroupNews()   — new Doc created each run (weekly). WORKING —
+ *                             finds the most recent Doc titled "Booker
+ *                             Group..." and pushes its whole body as
+ *                             one entry, linked back to that Doc.
  *
  * SETUP (one-off):
  * 1. In script.google.com, create a new project, paste this whole file in.
@@ -20,12 +21,12 @@
  *      MARKETPLACE_INTEL_DOC_ID = the running Marketplace Intel Doc ID
  *      COMPETITOR_WATCH_DOC_ID  = the running Competitor Watch Doc ID
  * 3. Edit KEYWORD_TAG_MAP below to match what you actually want tagged.
- * 4. Run pushMarketplaceIntel and pushCompetitorWatch once each manually
- *    to authorise them. Check the Execution log for "Found N entries"
- *    and "Pushed successfully" lines.
+ * 4. Run pushMarketplaceIntel, pushCompetitorWatch and pushBookerGroupNews
+ *    once each manually to authorise them. Check the Execution log for
+ *    "Found N entries" / "Using Doc" and "Pushed successfully" lines.
  * 5. Add a time-driven trigger for each: pushMarketplaceIntel a couple
- *    of hours after the twice-weekly run, pushCompetitorWatch a couple
- *    of hours after the Friday run.
+ *    of hours after the twice-weekly run, pushCompetitorWatch after the
+ *    Friday run, pushBookerGroupNews after the Monday run.
  *
  * TAGGING:
  * Every entry's heading + body text is lower-cased and checked against
@@ -81,27 +82,19 @@ function pushCompetitorWatch() {
 }
 
 /**
- * STUB — not wired up yet.
- *
- * Booker Group News creates a brand NEW Google Doc every Monday run,
- * rather than appending to one running Doc, so this needs a different
- * approach: search Drive for the most recently created Doc matching
- * this run, then treat its whole body as a single entry (no need to
- * split by date header, since one Doc = one week's entry).
- *
- * This can't be finished blind — we don't yet know the real title
- * Cowork gives these Docs, or exactly how it formats sub-sections
- * (plain paragraphs vs real headings, whether it uses bullet lists,
- * whether links are embedded). Once the Monday task has actually run
- * once, either:
- *   a) tell me the Doc's title/ID and I'll finish this properly, or
- *   b) fill in DOC_TITLE_CONTAINS below yourself and adjust the
- *      parsing loop to match what you see in the real Doc — it can
- *      mostly reuse richTextToMarkdown/isBoldParagraph/detectTags
- *      from this file.
+ * Booker Group News creates a brand NEW Google Doc every run (titled
+ * "Booker Group Weekly News Digest — <date>"), rather than appending to
+ * a running Doc — so one Doc = one entry here, no date-splitting needed.
+ * Finds the most recently created matching Doc, turns its whole body
+ * into one entry, and links the entry back to that Doc itself.
  */
 function pushBookerGroupNews() {
-  const DOC_TITLE_CONTAINS = 'Booker Group'; // adjust once you see the real title
+  const props = PropertiesService.getScriptProperties();
+  const token = props.getProperty('GITHUB_TOKEN');
+  const repo = props.getProperty('GITHUB_REPO');
+  const branch = props.getProperty('GITHUB_BRANCH') || 'main';
+
+  const DOC_TITLE_CONTAINS = 'Booker Group';
   const LOOKBACK_DAYS = 3;
 
   const files = DriveApp.searchFiles(
@@ -115,25 +108,77 @@ function pushBookerGroupNews() {
   }
 
   if (!latest) {
-    Logger.log('No Doc found matching title containing "' + DOC_TITLE_CONTAINS + '". ' +
-      'This is expected until the Monday task has run at least once — check back after that, ' +
-      'or tell Claude the real Doc title/ID once you have one.');
+    Logger.log('No Doc found matching title containing "' + DOC_TITLE_CONTAINS + '".');
     return;
   }
 
   const ageDays = (Date.now() - latest.getDateCreated().getTime()) / 86400000;
   if (ageDays > LOOKBACK_DAYS) {
     Logger.log('Most recent matching Doc ("' + latest.getName() + '") is ' + Math.round(ageDays) +
-      ' days old — older than LOOKBACK_DAYS (' + LOOKBACK_DAYS + '). Not pushing a stale doc. ' +
-      'Adjust LOOKBACK_DAYS if this is wrong.');
+      ' days old — older than LOOKBACK_DAYS (' + LOOKBACK_DAYS + '). Not pushing a stale doc.');
     return;
   }
 
-  Logger.log('Found candidate Doc: "' + latest.getName() + '" (id ' + latest.getId() + ', created ' + latest.getDateCreated() + '). ' +
-    'Parsing logic for this feed is not finished yet — see the comment on pushBookerGroupNews.');
-  // TODO once we've seen a real Doc: extract its body (reuse
-  // richTextToMarkdown / isBoldParagraph / detectTags below), build one
-  // entry from the whole thing, and push to _booker_group_news/.
+  const docId = latest.getId();
+  const docTitle = latest.getName();
+  const docUrl = latest.getUrl();
+  const dateStr = Utilities.formatDate(latest.getDateCreated(), 'Etc/UTC', 'yyyy-MM-dd');
+
+  Logger.log('Using Doc: "' + docTitle + '" (id ' + docId + ', created ' + dateStr + ')');
+
+  const summary = extractSingleDocBody(docId);
+  const entry = { date: dateStr, heading: docTitle, summary: summary, link: docUrl };
+  const tags = detectTags(entry.heading + ' ' + entry.summary);
+  const slug = slugify(entry.heading);
+  const path = '_booker_group_news/' + entry.date + '-' + slug + '.md';
+  const markdown = buildFrontmatter(entry, tags);
+
+  Logger.log('Pushing entry "' + entry.heading + '" to ' + path);
+  pushTextToGitHub(token, repo, branch, path, markdown, 'Add Booker Group News entry — ' + entry.heading);
+}
+
+// For "one new Doc per run" feeds: turns the whole Doc body into one
+// markdown blob, skipping the first hash-prefixed line (the Doc's own
+// title, already used as this entry's heading) and normalising every
+// other "#"-prefixed line to a "### " sub-heading.
+function extractSingleDocBody(docId) {
+  const doc = DocumentApp.openById(docId);
+  const body = doc.getBody();
+  const numChildren = body.getNumChildren();
+
+  const lines = [];
+  let skippedTitle = false;
+
+  for (let i = 0; i < numChildren; i++) {
+    const child = body.getChild(i);
+    const type = child.getType();
+
+    if (type === DocumentApp.ElementType.PARAGRAPH) {
+      const para = child.asParagraph();
+      const plainText = para.getText().trim();
+      if (!plainText) continue;
+
+      const hashMatch = plainText.match(/^(#{1,6})\s*(.*)$/);
+      const hashLevel = hashMatch ? hashMatch[1].length : 0;
+      const contentAfterHash = hashMatch ? hashMatch[2].trim() : plainText;
+
+      if (!skippedTitle && hashLevel > 0) {
+        skippedTitle = true;
+        continue;
+      }
+
+      lines.push(hashLevel > 0 ? ('### ' + contentAfterHash) : richTextToMarkdown(para));
+
+    } else if (type === DocumentApp.ElementType.LIST_ITEM) {
+      const item = child.asListItem();
+      const plainText = item.getText().trim();
+      if (!plainText) continue;
+      const isNumbered = item.getGlyphType() === DocumentApp.GlyphType.NUMBER;
+      lines.push((isNumbered ? '1. ' : '- ') + richTextToMarkdown(item));
+    }
+  }
+
+  return lines.join('\n\n');
 }
 
 // ---------------------------------------------------------------------
@@ -179,9 +224,12 @@ const MONTHS = {
   JULY: '07', AUGUST: '08', SEPTEMBER: '09', OCTOBER: '10', NOVEMBER: '11', DECEMBER: '12'
 };
 
-// Matches a standalone line like "15 SEPTEMBER 2026" or "18 September 2026".
+// Matches a standalone line like "15 SEPTEMBER 2026" or "18 September 2026",
+// tolerating a literal leading "#"/"##" etc. if the Doc has typed one in
+// as plain text rather than applying a real heading style.
 function parseDateHeading(text) {
-  const match = text.trim().match(/^(\d{1,2})\s+([A-Za-z]+)\s+(\d{4})$/);
+  const stripped = text.replace(/^#+\s*/, '').trim();
+  const match = stripped.match(/^(\d{1,2})\s+([A-Za-z]+)\s+(\d{4})$/);
   if (!match) return null;
   const month = MONTHS[match[2].toUpperCase()];
   if (!month) return null;
@@ -209,10 +257,18 @@ function extractEntriesFromDoc(docId, headingPrefix) {
       const plainText = para.getText().trim();
       if (!plainText) continue;
 
-      // A new entry starts at its date line (e.g. "15 SEPTEMBER 2026"),
-      // OR a real Heading 1/2 style, OR a fully-bold paragraph — covers
-      // both digests' actual formatting plus any future variation.
-      const dateHeading = parseDateHeading(plainText);
+      // This Doc types literal "#"/"##"/"###" characters as plain text
+      // rather than applying real heading styles — strip any leading
+      // hashes off before checking content, so both this and a Doc that
+      // uses genuine heading styles (no hashes at all) work the same way.
+      const hashMatch = plainText.match(/^(#{1,6})\s*(.*)$/);
+      const hashLevel = hashMatch ? hashMatch[1].length : 0;
+      const contentAfterHash = hashMatch ? hashMatch[2].trim() : plainText;
+
+      // A new entry starts at its date line (e.g. "15 SEPTEMBER 2026" or
+      // "## 18 September 2026"), OR a real Heading 1/2 style, OR a fully-
+      // bold paragraph — covers every formatting variant seen so far.
+      const dateHeading = parseDateHeading(contentAfterHash);
       const headingStyle = para.getHeading();
       const isTopHeading = headingStyle === DocumentApp.ParagraphHeading.HEADING1 ||
                             headingStyle === DocumentApp.ParagraphHeading.HEADING2;
@@ -222,23 +278,25 @@ function extractEntriesFromDoc(docId, headingPrefix) {
         if (current) entries.push(current);
         current = {
           date: dateHeading || new Date().toISOString().slice(0, 10),
-          heading: headingPrefix + plainText,
+          heading: headingPrefix + contentAfterHash,
           summaryLines: [],
           link: ''
         };
         continue;
       }
 
-      // A real Heading 3+ style, or a short ALL-CAPS line, reads as a
-      // sub-section header (e.g. "TOP 3 HEADLINES", "### DIY.com") —
-      // render as a markdown heading so structure survives on the page.
+      // A real Heading 3+ style, a literal "###"-style prefix, or a short
+      // ALL-CAPS line, all read as a sub-section header — render as a
+      // markdown heading so the structure survives on the page.
       const isSubHeadingStyle = headingStyle && headingStyle !== DocumentApp.ParagraphHeading.NORMAL &&
                                  !isTopHeading;
-      const isAllCapsSubHeader = plainText.length < 60 && plainText === plainText.toUpperCase() &&
-                                  /[A-Z]/.test(plainText);
+      const isHashSubHeader = hashLevel > 0; // any hash prefix that wasn't the date title
+      const isAllCapsSubHeader = contentAfterHash.length < 60 &&
+                                  contentAfterHash === contentAfterHash.toUpperCase() &&
+                                  /[A-Z]/.test(contentAfterHash);
 
-      if (isSubHeadingStyle || isAllCapsSubHeader) {
-        appendLine('### ' + plainText);
+      if (isSubHeadingStyle || isHashSubHeader || isAllCapsSubHeader) {
+        appendLine('### ' + contentAfterHash);
       } else {
         appendLine(richTextToMarkdown(para));
       }
@@ -333,6 +391,35 @@ function buildFrontmatter(entry, tags) {
     ''
   ];
   return front.join('\n');
+}
+
+// ---------------------------------------------------------------------
+// TEMPORARY DEBUG — remove once formatting is confirmed
+// ---------------------------------------------------------------------
+
+function debugInspectCompetitorWatchDoc() {
+  const docId = PropertiesService.getScriptProperties().getProperty('COMPETITOR_WATCH_DOC_ID');
+  const doc = DocumentApp.openById(docId);
+  const body = doc.getBody();
+  const numChildren = body.getNumChildren();
+
+  for (let i = 0; i < Math.min(numChildren, 25); i++) {
+    const child = body.getChild(i);
+    const type = child.getType();
+
+    if (type === DocumentApp.ElementType.PARAGRAPH) {
+      const para = child.asParagraph();
+      const text = para.getText();
+      const heading = para.getHeading();
+      const bold = text.length > 0 ? para.editAsText().isBold(0) : null;
+      Logger.log('[PARAGRAPH] heading=' + heading + ' bold@0=' + bold + ' text="' + text.slice(0, 70) + '"');
+    } else if (type === DocumentApp.ElementType.LIST_ITEM) {
+      const item = child.asListItem();
+      Logger.log('[LIST_ITEM] glyph=' + item.getGlyphType() + ' text="' + item.getText().slice(0, 70) + '"');
+    } else {
+      Logger.log('[' + type + ']');
+    }
+  }
 }
 
 // ---------------------------------------------------------------------
