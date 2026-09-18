@@ -1,0 +1,21 @@
+# Enables GitHub Pages to build this as a Jekyll site (this is the
+# default build type for a public repo — no extra setup needed on
+# GitHub's side).
+#
+# Each collection below is a folder of Markdown files, one per digest
+# entry. "output: false" means Jekyll won't generate an individual
+# page per entry — we only use the collection data to build the JSON
+# feeds in data/*.json (see those files for the Liquid templates).
+
+collections:
+  marketplace_intel:
+    output: false
+  booker_group_news:
+    output: false
+  competitor_watch:
+    output: false
+
+# Don't let Jekyll apply its default theme/layout wrapping to index.html —
+# it has no front matter, so it's already passed through untouched, but
+# this keeps that explicit.
+theme: null
