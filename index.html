@@ -60,7 +60,12 @@
     display: flex;
     border-bottom: 1px solid var(--rule);
     padding: 0 1.5rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
   }
+
+  nav.tabs::-webkit-scrollbar { display: none; }
 
   nav.tabs button {
     background: none;
@@ -72,6 +77,8 @@
     cursor: pointer;
     border-bottom: 2px solid transparent;
     font-family: inherit;
+    white-space: nowrap;
+    flex-shrink: 0;
   }
 
   nav.tabs button:hover { color: var(--ink); }
@@ -218,14 +225,74 @@
     .panel.active { animation: fade-in 0.15s ease-out; }
   }
   @keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+
+  @media (max-width: 600px) {
+    header.masthead {
+      padding: 1.5rem 1rem 1rem;
+    }
+
+    header.masthead h1 {
+      font-size: 1.5rem;
+    }
+
+    header.masthead p {
+      font-size: 0.9rem;
+    }
+
+    nav.tabs {
+      padding: 0 1rem;
+    }
+
+    nav.tabs button {
+      font-size: 0.9rem;
+      margin-right: 1.25rem;
+      padding: 0.8rem 0.1rem;
+    }
+
+    .search-row {
+      padding: 0 1rem;
+      margin-top: 0.85rem;
+    }
+
+    main {
+      padding: 1.25rem 1rem 3rem;
+    }
+
+    article.entry {
+      padding: 0.9rem 1rem;
+    }
+
+    article.entry h2 {
+      font-size: 1.05rem;
+    }
+
+    article.entry .body,
+    article.entry .body p {
+      font-size: 0.92rem;
+    }
+
+    article.entry .body ul,
+    article.entry .body ol {
+      padding-left: 1.1rem;
+    }
+
+    .tag {
+      padding: 0.3rem 0.6rem;
+      font-size: 0.78rem;
+    }
+
+    footer {
+      padding: 1.25rem 1rem;
+    }
+  }
 </style>
 </head>
 <body>
 
 <header class="masthead">
-  <div class="kicker">Personal — not the Marketplace team</div>
+  <div class="kicker">Andys Briefing</div>
   <h1>Marketplace Intelligence Briefing</h1>
-  <p>Three automated feeds, gathered on a schedule and dropped here as they land — my own reading list, not a team resource.</p>
+  <p>Three automated feeds, gathered on a schedule and dropped here as they land — my own reading list.</p>
 </header>
 
 <nav class="tabs" role="tablist">
