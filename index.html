@@ -128,10 +128,13 @@
     max-width: 720px;
     margin: 0 auto;
     padding: 0.65rem 1.5rem;
+    display: flex;
+    gap: 0.5rem;
   }
 
   .search-row input {
-    width: 100%;
+    flex: 1;
+    min-width: 0;
     padding: 0.55rem 0.8rem;
     font-size: 0.92rem;
     border: 1px solid var(--rule);
@@ -144,6 +147,146 @@
   .search-row input:focus-visible {
     outline: 2px solid var(--accent);
     outline-offset: 1px;
+  }
+
+  .tags-toggle {
+    flex-shrink: 0;
+    font-family: inherit;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--ink);
+    background: var(--paper-soft);
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    padding: 0 0.85rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+
+  .tags-toggle:hover { background: var(--rule); }
+
+  .tags-toggle.has-filter {
+    background: var(--accent-soft);
+    color: var(--accent);
+    border-color: var(--accent);
+  }
+
+  /* ---------- Tag drawer ---------- */
+
+  .tag-drawer-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(20, 22, 26, 0.4);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.18s ease;
+    z-index: 20;
+  }
+
+  .tag-drawer-backdrop.open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .tag-drawer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: min(300px, 85vw);
+    background: var(--paper);
+    box-shadow: -2px 0 12px rgba(0,0,0,0.15);
+    transform: translateX(100%);
+    transition: transform 0.2s ease;
+    z-index: 21;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tag-drawer.open { transform: translateX(0); }
+
+  .tag-drawer-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.1rem 1.25rem;
+    border-bottom: 1px solid var(--rule);
+    font-weight: 700;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.05rem;
+  }
+
+  .tag-drawer-close {
+    background: none;
+    border: none;
+    font-size: 1.4rem;
+    line-height: 1;
+    color: var(--meta);
+    cursor: pointer;
+    padding: 0.2rem;
+  }
+
+  .tag-drawer-close:hover { color: var(--ink); }
+
+  .tag-drawer-body {
+    overflow-y: auto;
+    padding: 0.75rem 1.25rem 1.5rem;
+  }
+
+  .tag-drawer-clear {
+    display: block;
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    border-bottom: 1px solid var(--rule);
+    color: var(--accent);
+    font-family: inherit;
+    font-size: 0.88rem;
+    font-weight: 600;
+    padding: 0.7rem 0;
+    cursor: pointer;
+    margin-bottom: 0.3rem;
+  }
+
+  .tag-drawer-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background: none;
+    border: none;
+    text-align: left;
+    font-family: inherit;
+    font-size: 0.9rem;
+    color: var(--ink-soft);
+    padding: 0.6rem 0.3rem;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+
+  .tag-drawer-item:hover { background: var(--paper-soft); }
+
+  .tag-drawer-item.active {
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  .tag-drawer-item .count {
+    font-size: 0.78rem;
+    color: var(--meta);
+  }
+
+  .tag-drawer-item.active .count { color: var(--accent); }
+
+  .tag-drawer-empty {
+    color: var(--meta);
+    font-size: 0.88rem;
+    font-style: italic;
+    padding: 0.6rem 0.3rem;
   }
 
   /* ---------- Article list ---------- */
@@ -225,31 +368,6 @@
 
   article.entry .read-more:hover { text-decoration: underline; }
 
-  .tags {
-    margin: 0.7rem 0 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.4rem;
-  }
-
-  .tag {
-    font-size: 0.74rem;
-    color: var(--ink-soft);
-    background: var(--paper-soft);
-    border: 1px solid var(--rule);
-    border-radius: 3px;
-    padding: 0.22rem 0.55rem;
-    cursor: pointer;
-  }
-
-  .tag:hover { background: var(--rule); }
-
-  .tag.active {
-    background: var(--accent-soft);
-    color: var(--accent);
-    border-color: var(--accent);
-  }
-
   .empty, .loading {
     color: var(--meta);
     font-size: 0.9rem;
@@ -329,8 +447,18 @@
   </nav>
   <div class="search-row">
     <input type="text" id="search-input" placeholder="Search this feed by keyword or tag&hellip;" autocomplete="off">
+    <button class="tags-toggle" id="tags-toggle" aria-haspopup="true" aria-expanded="false">Tags</button>
   </div>
 </div>
+
+<div class="tag-drawer-backdrop" id="tag-drawer-backdrop"></div>
+<aside class="tag-drawer" id="tag-drawer" aria-hidden="true" aria-label="Filter by tag">
+  <div class="tag-drawer-header">
+    <span>Filter by tag</span>
+    <button class="tag-drawer-close" id="tag-drawer-close" aria-label="Close">&times;</button>
+  </div>
+  <div class="tag-drawer-body" id="tag-drawer-list"></div>
+</aside>
 
 <main>
   <section id="marketplace-intel" class="panel active"></section>
@@ -356,11 +484,28 @@
   let activeFeedId = "marketplace-intel";
   let activeTag = null;
   const searchInput = document.getElementById("search-input");
+  const tagsToggle = document.getElementById("tags-toggle");
+  const tagDrawer = document.getElementById("tag-drawer");
+  const tagDrawerBackdrop = document.getElementById("tag-drawer-backdrop");
+  const tagDrawerList = document.getElementById("tag-drawer-list");
+  const tagDrawerClose = document.getElementById("tag-drawer-close");
 
   let observer = null;
 
   function stripTags(html) {
     return html.replace(/<[^>]*>/g, " ");
+  }
+
+  // Decodes the handful of HTML entities that actually turn up in this
+  // content (company names like "B&amp;Q") so searching "B&Q" matches
+  // text that's stored HTML-encoded, not just the raw encoded form.
+  function decodeEntities(text) {
+    return text
+      .replace(/&amp;/g, "&")
+      .replace(/&lt;/g, "<")
+      .replace(/&gt;/g, ">")
+      .replace(/&quot;/g, '"')
+      .replace(/&#39;/g, "'");
   }
 
   // Fetches a feed's JSON only the first time its tab is opened, not upfront —
@@ -397,7 +542,7 @@
       const matchesTag = !activeTag || e.tags.includes(activeTag);
       if (!matchesTag) return false;
       if (!query) return true;
-      const haystack = [e.heading, stripTags(e.summary), ...e.tags].join(" ").toLowerCase();
+      const haystack = decodeEntities([e.heading, stripTags(e.summary), ...e.tags].join(" ")).toLowerCase();
       return haystack.includes(query);
     });
 
@@ -434,21 +579,12 @@
         <div class="date">${e.date}</div>
         <h2>${e.heading}</h2>
         <div class="body">${e.summary}</div>
-        ${e.tags.length ? `<div class="tags">${e.tags.map(t => `<span class="tag${t === activeTag ? " active" : ""}" data-tag="${t}">${t}</span>`).join("")}</div>` : ""}
         ${e.link ? `<a class="read-more" href="${e.link}" target="_blank" rel="noopener">Read the full doc &rarr;</a>` : ""}
       `;
       list.appendChild(article);
     });
 
     state.shown += nextBatch.length;
-
-    list.querySelectorAll(".tag").forEach(chip => {
-      chip.addEventListener("click", () => {
-        const tag = chip.dataset.tag;
-        activeTag = (activeTag === tag) ? null : tag;
-        resetAndRender();
-      });
-    });
 
     updateLoadMoreRow(panel, state);
   }
@@ -480,6 +616,76 @@
     }
   }
 
+  // ---------- Tag drawer ----------
+
+  function buildTagDrawer() {
+    const data = feedData[activeFeedId];
+    tagDrawerList.innerHTML = "";
+
+    if (!data || !data.entries.length) {
+      tagDrawerList.innerHTML = '<p class="tag-drawer-empty">No tags yet.</p>';
+      return;
+    }
+
+    const counts = {};
+    data.entries.forEach(e => {
+      e.tags.forEach(t => { counts[t] = (counts[t] || 0) + 1; });
+    });
+    const tags = Object.keys(counts).sort();
+
+    if (!tags.length) {
+      tagDrawerList.innerHTML = '<p class="tag-drawer-empty">No tags on this feed yet.</p>';
+      return;
+    }
+
+    if (activeTag) {
+      const clearBtn = document.createElement("button");
+      clearBtn.className = "tag-drawer-clear";
+      clearBtn.textContent = "Clear filter";
+      clearBtn.addEventListener("click", () => selectTag(null));
+      tagDrawerList.appendChild(clearBtn);
+    }
+
+    tags.forEach(tag => {
+      const btn = document.createElement("button");
+      btn.className = "tag-drawer-item" + (tag === activeTag ? " active" : "");
+      btn.innerHTML = `<span>${tag}</span><span class="count">${counts[tag]}</span>`;
+      btn.addEventListener("click", () => selectTag(tag === activeTag ? null : tag));
+      tagDrawerList.appendChild(btn);
+    });
+  }
+
+  function selectTag(tag) {
+    activeTag = tag;
+    tagsToggle.classList.toggle("has-filter", !!activeTag);
+    tagsToggle.textContent = activeTag ? `Tags: ${activeTag}` : "Tags";
+    resetAndRender();
+    buildTagDrawer();
+    closeTagDrawer();
+  }
+
+  function openTagDrawer() {
+    buildTagDrawer();
+    tagDrawer.classList.add("open");
+    tagDrawerBackdrop.classList.add("open");
+    tagDrawer.setAttribute("aria-hidden", "false");
+    tagsToggle.setAttribute("aria-expanded", "true");
+  }
+
+  function closeTagDrawer() {
+    tagDrawer.classList.remove("open");
+    tagDrawerBackdrop.classList.remove("open");
+    tagDrawer.setAttribute("aria-hidden", "true");
+    tagsToggle.setAttribute("aria-expanded", "false");
+  }
+
+  tagsToggle.addEventListener("click", openTagDrawer);
+  tagDrawerClose.addEventListener("click", closeTagDrawer);
+  tagDrawerBackdrop.addEventListener("click", closeTagDrawer);
+  document.addEventListener("keydown", e => {
+    if (e.key === "Escape") closeTagDrawer();
+  });
+
   document.querySelectorAll(".tab-btn").forEach(btn => {
     btn.addEventListener("click", () => {
       if (btn.classList.contains("active")) return;
@@ -489,6 +695,8 @@
       btn.setAttribute("aria-selected", "true");
       document.getElementById(btn.dataset.target).classList.add("active");
       activeTag = null;
+      tagsToggle.classList.remove("has-filter");
+      tagsToggle.textContent = "Tags";
       searchInput.value = "";
       showFeed(btn.dataset.target);
     });
