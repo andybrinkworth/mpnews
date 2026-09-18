@@ -7,58 +7,86 @@
 <title>Marketplace Intelligence Briefing</title>
 <style>
   :root {
-    --paper: #F6F4EE;
-    --paper-raised: #FFFFFF;
-    --ink: #1C1E22;
-    --ink-soft: #55585F;
-    --rule: #D9D4C6;
-    --navy: #1F3A5C;
-    --navy-soft: #6C859E;
-    --amber: #A9793C;
+    --ink: #14161A;
+    --ink-soft: #4B4E54;
+    --meta: #767A82;
+    --paper: #FFFFFF;
+    --paper-soft: #F6F6F4;
+    --rule: #E4E2DD;
+    --accent: #C0102A;
+    --accent-soft: #FBEAEC;
   }
 
   * { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
 
   body {
     margin: 0;
     background: var(--paper);
     color: var(--ink);
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-    line-height: 1.5;
+    line-height: 1.55;
   }
 
+  a { color: var(--accent); }
+
+  /* ---------- Masthead ---------- */
+
   header.masthead {
-    border-bottom: 3px solid var(--ink);
-    padding: 2rem 1.5rem 1.25rem;
-    max-width: 760px;
+    background: var(--ink);
+    color: #fff;
+    padding: 1.5rem 1.5rem 1.25rem;
+  }
+
+  header.masthead .inner {
+    max-width: 720px;
     margin: 0 auto;
   }
 
   header.masthead .kicker {
-    font-size: 0.8rem;
-    color: var(--navy-soft);
-    margin-bottom: 0.35rem;
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #fff;
+    background: var(--accent);
+    padding: 0.18rem 0.5rem;
+    border-radius: 1px;
+    margin-bottom: 0.7rem;
   }
 
   header.masthead h1 {
     font-family: Georgia, "Times New Roman", serif;
-    font-size: 2.1rem;
-    margin: 0 0 0.35rem;
+    font-size: 1.9rem;
+    font-weight: 700;
+    line-height: 1.15;
+    margin: 0 0 0.45rem;
     letter-spacing: -0.01em;
   }
 
   header.masthead p {
     margin: 0;
-    color: var(--ink-soft);
-    font-size: 0.95rem;
+    color: #C7C9CD;
+    font-size: 0.92rem;
     max-width: 55ch;
   }
 
+  /* ---------- Sticky nav + search ---------- */
+
+  .controls {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: var(--paper);
+    border-bottom: 1px solid var(--rule);
+  }
+
   nav.tabs {
-    max-width: 760px;
+    max-width: 720px;
     margin: 0 auto;
     display: flex;
-    border-bottom: 1px solid var(--rule);
     padding: 0 1.5rem;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
@@ -70,10 +98,13 @@
   nav.tabs button {
     background: none;
     border: none;
-    font-size: 0.95rem;
-    padding: 0.9rem 0.1rem;
-    margin-right: 1.75rem;
-    color: var(--ink-soft);
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    padding: 0.85rem 0.1rem;
+    margin-right: 1.5rem;
+    color: var(--meta);
     cursor: pointer;
     border-bottom: 2px solid transparent;
     font-family: inherit;
@@ -84,225 +115,221 @@
   nav.tabs button:hover { color: var(--ink); }
 
   nav.tabs button.active {
-    color: var(--navy);
-    border-bottom-color: var(--navy);
-    font-weight: 600;
+    color: var(--ink);
+    border-bottom-color: var(--accent);
   }
 
   nav.tabs button:focus-visible {
-    outline: 2px solid var(--navy);
+    outline: 2px solid var(--accent);
     outline-offset: 2px;
   }
 
-  main {
-    max-width: 760px;
+  .search-row {
+    max-width: 720px;
     margin: 0 auto;
-    padding: 1.75rem 1.5rem 4rem;
+    padding: 0.65rem 1.5rem;
+  }
+
+  .search-row input {
+    width: 100%;
+    padding: 0.55rem 0.8rem;
+    font-size: 0.92rem;
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    background: var(--paper-soft);
+    color: var(--ink);
+    font-family: inherit;
+  }
+
+  .search-row input:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 1px;
+  }
+
+  /* ---------- Article list ---------- */
+
+  main {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0.5rem 1.5rem 3rem;
   }
 
   .panel { display: none; }
   .panel.active { display: block; }
 
   .panel .cadence {
-    font-size: 0.82rem;
-    color: var(--amber);
-    margin-bottom: 1.25rem;
+    font-size: 0.78rem;
+    color: var(--meta);
+    padding: 0.9rem 0 0.6rem;
   }
 
   article.entry {
-    background: var(--paper-raised);
-    border: 1px solid var(--rule);
-    border-radius: 2px;
-    padding: 1.1rem 1.25rem;
-    margin-bottom: 1rem;
+    padding: 1.25rem 0;
+    border-bottom: 1px solid var(--rule);
   }
 
+  article.entry:first-of-type { padding-top: 0.9rem; }
+
   article.entry .date {
-    font-size: 0.78rem;
-    color: var(--navy-soft);
-    margin-bottom: 0.3rem;
+    font-size: 0.74rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.35rem;
   }
 
   article.entry h2 {
     font-family: Georgia, "Times New Roman", serif;
-    font-size: 1.15rem;
-    margin: 0 0 0.4rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    line-height: 1.25;
+    margin: 0 0 0.5rem;
   }
 
   article.entry .body {
     color: var(--ink-soft);
-    font-size: 0.95rem;
+    font-size: 0.96rem;
   }
 
   article.entry .body h3 {
     font-family: Georgia, "Times New Roman", serif;
-    font-size: 0.95rem;
-    color: var(--navy);
-    margin: 1rem 0 0.3rem;
-    letter-spacing: 0.01em;
+    font-size: 0.98rem;
+    font-weight: 700;
+    color: var(--ink);
+    margin: 1rem 0 0.35rem;
   }
 
   article.entry .body h3:first-child { margin-top: 0; }
 
-  article.entry .body p { margin: 0 0 0.6rem; }
+  article.entry .body p { margin: 0 0 0.65rem; }
 
   article.entry .body ul,
   article.entry .body ol {
-    margin: 0 0 0.6rem;
-    padding-left: 1.25rem;
+    margin: 0 0 0.65rem;
+    padding-left: 1.2rem;
   }
 
-  article.entry .body li { margin-bottom: 0.35rem; }
+  article.entry .body li { margin-bottom: 0.4rem; }
 
-  article.entry a {
-    font-size: 0.88rem;
-    color: var(--navy);
+  article.entry .body a { text-decoration: underline; text-underline-offset: 2px; }
+
+  article.entry .read-more {
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-size: 0.86rem;
+    font-weight: 600;
+    color: var(--accent);
+    text-decoration: none;
   }
+
+  article.entry .read-more:hover { text-decoration: underline; }
 
   .tags {
-    margin: 0.5rem 0 0;
+    margin: 0.7rem 0 0;
     display: flex;
     flex-wrap: wrap;
     gap: 0.4rem;
   }
 
   .tag {
-    font-size: 0.76rem;
-    color: var(--navy);
-    background: #EDF1F5;
+    font-size: 0.74rem;
+    color: var(--ink-soft);
+    background: var(--paper-soft);
     border: 1px solid var(--rule);
-    border-radius: 2px;
-    padding: 0.12rem 0.5rem;
+    border-radius: 3px;
+    padding: 0.22rem 0.55rem;
     cursor: pointer;
   }
 
-  .tag:hover { background: #E0E7EE; }
+  .tag:hover { background: var(--rule); }
 
   .tag.active {
-    background: var(--navy);
-    color: #fff;
-    border-color: var(--navy);
+    background: var(--accent-soft);
+    color: var(--accent);
+    border-color: var(--accent);
   }
 
-  .empty {
-    color: var(--ink-soft);
+  .empty, .loading {
+    color: var(--meta);
     font-size: 0.9rem;
     font-style: italic;
+    padding: 1.5rem 0;
   }
 
-  .search-row {
-    max-width: 760px;
-    margin: 1rem auto 0;
-    padding: 0 1.5rem;
+  /* ---------- Lazy-load sentinel / load-more ---------- */
+
+  .load-more-row {
+    padding: 1.25rem 0;
+    text-align: center;
   }
 
-  .search-row input {
-    width: 100%;
-    padding: 0.6rem 0.8rem;
-    font-size: 0.95rem;
-    border: 1px solid var(--rule);
-    border-radius: 2px;
-    background: var(--paper-raised);
-    color: var(--ink);
+  .load-more-btn {
     font-family: inherit;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--ink);
+    background: var(--paper-soft);
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    padding: 0.55rem 1.1rem;
+    cursor: pointer;
   }
 
-  .search-row input:focus-visible {
-    outline: 2px solid var(--navy);
-    outline-offset: 1px;
-  }
+  .load-more-btn:hover { background: var(--rule); }
 
   footer {
-    max-width: 760px;
+    max-width: 720px;
     margin: 0 auto;
     padding: 1.5rem;
-    color: var(--ink-soft);
-    font-size: 0.78rem;
+    color: var(--meta);
+    font-size: 0.76rem;
     border-top: 1px solid var(--rule);
   }
 
   @media (prefers-reduced-motion: no-preference) {
-    .panel.active { animation: fade-in 0.15s ease-out; }
+    article.entry { animation: fade-in 0.15s ease-out; }
   }
   @keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
 
   @media (max-width: 600px) {
-    header.masthead {
-      padding: 1.5rem 1rem 1rem;
-    }
+    header.masthead { padding: 1.25rem 1rem 1rem; }
+    header.masthead h1 { font-size: 1.5rem; }
+    header.masthead p { font-size: 0.88rem; }
 
-    header.masthead h1 {
-      font-size: 1.5rem;
-    }
+    nav.tabs { padding: 0 1rem; }
+    nav.tabs button { font-size: 0.78rem; margin-right: 1.1rem; }
 
-    header.masthead p {
-      font-size: 0.9rem;
-    }
+    .search-row { padding: 0.6rem 1rem; }
 
-    nav.tabs {
-      padding: 0 1rem;
-    }
+    main { padding: 0.25rem 1rem 2.5rem; }
 
-    nav.tabs button {
-      font-size: 0.9rem;
-      margin-right: 1.25rem;
-      padding: 0.8rem 0.1rem;
-    }
+    article.entry h2 { font-size: 1.15rem; }
+    article.entry .body, article.entry .body p { font-size: 0.92rem; }
 
-    .search-row {
-      padding: 0 1rem;
-      margin-top: 0.85rem;
-    }
-
-    main {
-      padding: 1.25rem 1rem 3rem;
-    }
-
-    article.entry {
-      padding: 0.9rem 1rem;
-    }
-
-    article.entry h2 {
-      font-size: 1.05rem;
-    }
-
-    article.entry .body,
-    article.entry .body p {
-      font-size: 0.92rem;
-    }
-
-    article.entry .body ul,
-    article.entry .body ol {
-      padding-left: 1.1rem;
-    }
-
-    .tag {
-      padding: 0.3rem 0.6rem;
-      font-size: 0.78rem;
-    }
-
-    footer {
-      padding: 1.25rem 1rem;
-    }
+    footer { padding: 1.25rem 1rem; }
   }
 </style>
 </head>
 <body>
 
 <header class="masthead">
-  <div class="kicker">Andys Briefing</div>
-  <h1>Marketplace Intelligence Briefing</h1>
-  <p>Three automated feeds, gathered on a schedule and dropped here as they land — my own reading list.</p>
+  <div class="inner">
+    <div class="kicker">Andys Briefing</div>
+    <h1>Marketplace Intelligence Briefing</h1>
+    <p>Three automated feeds, gathered on a schedule and dropped here as they land — my own reading list.</p>
+  </div>
 </header>
 
-<nav class="tabs" role="tablist">
-  <button class="tab-btn active" data-target="marketplace-intel" role="tab" aria-selected="true">Marketplace Intel</button>
-  <button class="tab-btn" data-target="booker-group-news" role="tab" aria-selected="false">Booker Group News</button>
-  <button class="tab-btn" data-target="competitor-watch" role="tab" aria-selected="false">Competitor Watch</button>
-</nav>
-
-<div class="search-row">
-  <input type="text" id="search-input" placeholder="Search this feed by keyword or tag&hellip;" autocomplete="off">
+<div class="controls">
+  <nav class="tabs" role="tablist">
+    <button class="tab-btn active" data-target="marketplace-intel" role="tab" aria-selected="true">Marketplace Intel</button>
+    <button class="tab-btn" data-target="booker-group-news" role="tab" aria-selected="false">Booker Group News</button>
+    <button class="tab-btn" data-target="competitor-watch" role="tab" aria-selected="false">Competitor Watch</button>
+  </nav>
+  <div class="search-row">
+    <input type="text" id="search-input" placeholder="Search this feed by keyword or tag&hellip;" autocomplete="off">
+  </div>
 </div>
 
 <main>
@@ -316,96 +343,166 @@
 </footer>
 
 <script>
-  const feeds = [
-    { id: "marketplace-intel", file: "data/marketplace-intel.json" },
-    { id: "booker-group-news", file: "data/booker-group-news.json" },
-    { id: "competitor-watch", file: "data/competitor-watch.json" }
-  ];
+  const FEED_FILES = {
+    "marketplace-intel": "data/marketplace-intel.json",
+    "booker-group-news": "data/booker-group-news.json",
+    "competitor-watch": "data/competitor-watch.json"
+  };
 
-  const feedData = {};   // id -> { title, cadence, entries }
+  const PAGE_SIZE = 6; // entries rendered per batch — this is the "lazy loading" unit
+
+  const feedData = {};     // id -> { title, cadence, entries } — only populated once a tab is opened
+  const feedState = {};    // id -> { filtered: [...], shown: n }
   let activeFeedId = "marketplace-intel";
   let activeTag = null;
   const searchInput = document.getElementById("search-input");
 
-  async function loadFeed(feed) {
-    const panel = document.getElementById(feed.id);
+  let observer = null;
+
+  function stripTags(html) {
+    return html.replace(/<[^>]*>/g, " ");
+  }
+
+  // Fetches a feed's JSON only the first time its tab is opened, not upfront —
+  // avoids pulling all three feeds' data before the person has even looked.
+  async function ensureFeedLoaded(feedId) {
+    if (feedData[feedId]) return feedData[feedId];
+    const panel = document.getElementById(feedId);
+    panel.innerHTML = '<p class="loading">Loading&hellip;</p>';
     try {
-      const res = await fetch(feed.file, { cache: "no-store" });
+      const res = await fetch(FEED_FILES[feedId], { cache: "no-store" });
       const data = await res.json();
       data.entries = (data.entries || []).map(e => ({ ...e, tags: e.tags || [] }));
-      feedData[feed.id] = data;
-      if (feed.id === activeFeedId) renderActivePanel();
+      feedData[feedId] = data;
+      return data;
     } catch (err) {
       panel.innerHTML = '<p class="empty">Could not load this feed yet.</p>';
+      return null;
     }
   }
 
-  function renderActivePanel() {
-    const panel = document.getElementById(activeFeedId);
+  async function showFeed(feedId) {
+    activeFeedId = feedId;
+    const data = await ensureFeedLoaded(feedId);
+    if (!data) return;
+    resetAndRender();
+  }
+
+  function resetAndRender() {
     const data = feedData[activeFeedId];
     if (!data) return;
 
-    const cadence = data.cadence ? `<div class="cadence">${data.cadence}</div>` : "";
-
-    if (!data.entries.length) {
-      panel.innerHTML = cadence + '<p class="empty">No entries yet.</p>';
-      return;
-    }
-
     const query = (searchInput.value || "").trim().toLowerCase();
-    const stripTags = html => html.replace(/<[^>]*>/g, " ");
     const filtered = data.entries.filter(e => {
       const matchesTag = !activeTag || e.tags.includes(activeTag);
       if (!matchesTag) return false;
       if (!query) return true;
-      const haystack = [e.heading, stripTags(e.summary), ...(e.tags || [])].join(" ").toLowerCase();
+      const haystack = [e.heading, stripTags(e.summary), ...e.tags].join(" ").toLowerCase();
       return haystack.includes(query);
     });
 
-    const sorted = [...filtered].sort((a, b) => (a.date < b.date ? 1 : -1));
+    filtered.sort((a, b) => (a.date < b.date ? 1 : -1));
 
-    if (!sorted.length) {
-      panel.innerHTML = cadence + '<p class="empty">Nothing matches that search.</p>';
+    feedState[activeFeedId] = { filtered, shown: 0 };
+    renderPanel(true);
+  }
+
+  function renderPanel(fresh) {
+    const panel = document.getElementById(activeFeedId);
+    const data = feedData[activeFeedId];
+    const state = feedState[activeFeedId];
+    if (!data || !state) return;
+
+    const cadence = data.cadence ? `<div class="cadence">${data.cadence}</div>` : "";
+
+    if (!state.filtered.length) {
+      panel.innerHTML = cadence + `<p class="empty">${data.entries.length ? "Nothing matches that search." : "No entries yet."}</p>`;
       return;
     }
 
-    const items = sorted.map(e => `
-      <article class="entry">
+    if (fresh) {
+      panel.innerHTML = cadence + '<div class="entry-list"></div><div class="load-more-row"></div>';
+    }
+
+    const list = panel.querySelector(".entry-list");
+    const nextBatch = state.filtered.slice(state.shown, state.shown + PAGE_SIZE);
+
+    nextBatch.forEach(e => {
+      const article = document.createElement("article");
+      article.className = "entry";
+      article.innerHTML = `
         <div class="date">${e.date}</div>
         <h2>${e.heading}</h2>
         <div class="body">${e.summary}</div>
         ${e.tags.length ? `<div class="tags">${e.tags.map(t => `<span class="tag${t === activeTag ? " active" : ""}" data-tag="${t}">${t}</span>`).join("")}</div>` : ""}
-        ${e.link ? `<a href="${e.link}" target="_blank" rel="noopener">Read the full doc &rarr;</a>` : ""}
-      </article>
-    `).join("");
-    panel.innerHTML = cadence + items;
+        ${e.link ? `<a class="read-more" href="${e.link}" target="_blank" rel="noopener">Read the full doc &rarr;</a>` : ""}
+      `;
+      list.appendChild(article);
+    });
 
-    panel.querySelectorAll(".tag").forEach(chip => {
+    state.shown += nextBatch.length;
+
+    list.querySelectorAll(".tag").forEach(chip => {
       chip.addEventListener("click", () => {
         const tag = chip.dataset.tag;
         activeTag = (activeTag === tag) ? null : tag;
-        renderActivePanel();
+        resetAndRender();
       });
     });
+
+    updateLoadMoreRow(panel, state);
+  }
+
+  // Infinite-scroll sentinel with a manual "Load more" fallback — either
+  // way, entries beyond the first page aren't rendered until needed.
+  function updateLoadMoreRow(panel, state) {
+    const row = panel.querySelector(".load-more-row");
+    if (!row) return;
+
+    if (observer) observer.disconnect();
+
+    if (state.shown >= state.filtered.length) {
+      row.innerHTML = "";
+      return;
+    }
+
+    row.innerHTML = '<button class="load-more-btn">Load more</button>';
+    const btn = row.querySelector(".load-more-btn");
+    btn.addEventListener("click", () => renderPanel(false));
+
+    if ("IntersectionObserver" in window) {
+      observer = new IntersectionObserver(entries => {
+        if (entries[0].isIntersecting) {
+          renderPanel(false);
+        }
+      }, { rootMargin: "200px" });
+      observer.observe(row);
+    }
   }
 
   document.querySelectorAll(".tab-btn").forEach(btn => {
     btn.addEventListener("click", () => {
+      if (btn.classList.contains("active")) return;
       document.querySelectorAll(".tab-btn").forEach(b => { b.classList.remove("active"); b.setAttribute("aria-selected", "false"); });
       document.querySelectorAll(".panel").forEach(p => p.classList.remove("active"));
       btn.classList.add("active");
       btn.setAttribute("aria-selected", "true");
-      activeFeedId = btn.dataset.target;
+      document.getElementById(btn.dataset.target).classList.add("active");
       activeTag = null;
       searchInput.value = "";
-      document.getElementById(activeFeedId).classList.add("active");
-      renderActivePanel();
+      showFeed(btn.dataset.target);
     });
   });
 
-  searchInput.addEventListener("input", renderActivePanel);
+  let searchDebounce = null;
+  searchInput.addEventListener("input", () => {
+    clearTimeout(searchDebounce);
+    searchDebounce = setTimeout(resetAndRender, 150);
+  });
 
-  feeds.forEach(loadFeed);
+  // Only the first (active) feed loads on page open — the others load
+  // lazily the moment their tab is clicked.
+  showFeed(activeFeedId);
 </script>
 
 </body>
