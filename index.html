@@ -122,11 +122,30 @@
     margin: 0 0 0.4rem;
   }
 
-  article.entry p {
-    margin: 0 0 0.5rem;
+  article.entry .body {
     color: var(--ink-soft);
     font-size: 0.95rem;
   }
+
+  article.entry .body h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 0.95rem;
+    color: var(--navy);
+    margin: 1rem 0 0.3rem;
+    letter-spacing: 0.01em;
+  }
+
+  article.entry .body h3:first-child { margin-top: 0; }
+
+  article.entry .body p { margin: 0 0 0.6rem; }
+
+  article.entry .body ul,
+  article.entry .body ol {
+    margin: 0 0 0.6rem;
+    padding-left: 1.25rem;
+  }
+
+  article.entry .body li { margin-bottom: 0.35rem; }
 
   article.entry a {
     font-size: 0.88rem;
@@ -267,11 +286,12 @@
     }
 
     const query = (searchInput.value || "").trim().toLowerCase();
+    const stripTags = html => html.replace(/<[^>]*>/g, " ");
     const filtered = data.entries.filter(e => {
       const matchesTag = !activeTag || e.tags.includes(activeTag);
       if (!matchesTag) return false;
       if (!query) return true;
-      const haystack = [e.heading, e.summary, ...(e.tags || [])].join(" ").toLowerCase();
+      const haystack = [e.heading, stripTags(e.summary), ...(e.tags || [])].join(" ").toLowerCase();
       return haystack.includes(query);
     });
 
@@ -286,7 +306,7 @@
       <article class="entry">
         <div class="date">${e.date}</div>
         <h2>${e.heading}</h2>
-        <p>${e.summary}</p>
+        <div class="body">${e.summary}</div>
         ${e.tags.length ? `<div class="tags">${e.tags.map(t => `<span class="tag${t === activeTag ? " active" : ""}" data-tag="${t}">${t}</span>`).join("")}</div>` : ""}
         ${e.link ? `<a href="${e.link}" target="_blank" rel="noopener">Read the full doc &rarr;</a>` : ""}
       </article>

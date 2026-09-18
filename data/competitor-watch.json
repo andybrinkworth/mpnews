@@ -8,7 +8,7 @@
     {
       "date": {{ item.date | date: "%Y-%m-%d" | jsonify }},
       "heading": {{ item.title | jsonify }},
-      "summary": {{ item.content | strip_html | strip_newlines | strip | jsonify }},
+      "summary": {{ item.content | jsonify }},
       "link": {{ item.link | default: "" | jsonify }},
       "tags": {{ item.tags | jsonify }}
     }{% unless forloop.last %},{% endunless %}

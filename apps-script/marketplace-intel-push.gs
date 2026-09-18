@@ -49,7 +49,16 @@ function pushMarketplaceIntel() {
   const branch = props.getProperty('GITHUB_BRANCH') || 'main';
   const docId = props.getProperty('DOC_ID');
 
+  Logger.log('DOC_ID: ' + docId);
+  Logger.log('GITHUB_REPO: ' + repo + '  GITHUB_BRANCH: ' + branch);
+
   const entries = extractEntriesFromDoc(docId);
+  Logger.log('Found ' + entries.length + ' entries to push.');
+
+  if (entries.length === 0) {
+    Logger.log('No entries found — the Doc has no date-header line matching "DD MONTH YYYY" (e.g. "15 SEPTEMBER 2026"), and no Heading 1/2 or bold paragraphs either.');
+    return;
+  }
 
   entries.forEach(entry => {
     const tags = detectTags(entry.heading + ' ' + entry.summary);
@@ -57,6 +66,7 @@ function pushMarketplaceIntel() {
     const path = '_marketplace_intel/' + entry.date + '-' + slug + '.md';
     const markdown = buildFrontmatter(entry, tags);
 
+    Logger.log('Pushing entry "' + entry.heading + '" to ' + path);
     pushTextToGitHub(token, repo, branch, path, markdown,
       'Add marketplace intel entry — ' + entry.heading);
   });
@@ -97,6 +107,22 @@ function buildFrontmatter(entry, tags) {
   return front.join('\n');
 }
 
+const MONTHS = {
+  JANUARY: '01', FEBRUARY: '02', MARCH: '03', APRIL: '04', MAY: '05', JUNE: '06',
+  JULY: '07', AUGUST: '08', SEPTEMBER: '09', OCTOBER: '10', NOVEMBER: '11', DECEMBER: '12'
+};
+
+// Matches a standalone line like "15 SEPTEMBER 2026" — the date header
+// this Doc actually uses to mark the start of each digest run. Returns
+// "YYYY-MM-DD" or null if the text doesn't match that shape.
+function parseDateHeading(text) {
+  const match = text.trim().match(/^(\d{1,2})\s+([A-Za-z]+)\s+(\d{4})$/);
+  if (!match) return null;
+  const month = MONTHS[match[2].toUpperCase()];
+  if (!month) return null;
+  return match[3] + '-' + month + '-' + match[1].padStart(2, '0');
+}
+
 function extractEntriesFromDoc(docId) {
   const doc = DocumentApp.openById(docId);
   const body = doc.getBody();
@@ -104,30 +130,75 @@ function extractEntriesFromDoc(docId) {
 
   const entries = [];
   let current = null;
-  const today = new Date().toISOString().slice(0, 10);
+
+  function appendLine(line) {
+    if (current) current.summaryLines.push(line);
+  }
 
   for (let i = 0; i < numChildren; i++) {
     const child = body.getChild(i);
-    if (child.getType() !== DocumentApp.ElementType.PARAGRAPH) continue;
+    const type = child.getType();
 
-    const para = child.asParagraph();
-    const heading = para.getHeading();
-    const text = para.getText().trim();
-    if (!text) continue;
+    if (type === DocumentApp.ElementType.PARAGRAPH) {
+      const para = child.asParagraph();
+      const text = para.getText().trim();
+      if (!text) continue;
 
-    const isHeading = heading === DocumentApp.ParagraphHeading.HEADING1 ||
-                       heading === DocumentApp.ParagraphHeading.HEADING2;
+      // A new digest run starts at its date line (e.g. "15 SEPTEMBER 2026").
+      // Real Heading 1/2 style or a fully-bold paragraph also counts, in
+      // case the Doc's formatting changes in future.
+      const dateHeading = parseDateHeading(text);
+      const headingStyle = para.getHeading();
+      const isHeadingStyle = headingStyle === DocumentApp.ParagraphHeading.HEADING1 ||
+                              headingStyle === DocumentApp.ParagraphHeading.HEADING2;
+      const isTitle = !!dateHeading || isHeadingStyle || isBoldParagraph(para);
 
-    if (isHeading) {
-      if (current) entries.push(current);
-      current = { date: today, heading: text, summary: '', link: '' };
-    } else if (current) {
-      current.summary += (current.summary ? ' ' : '') + text;
+      if (isTitle) {
+        if (current) entries.push(current);
+        current = {
+          date: dateHeading || new Date().toISOString().slice(0, 10),
+          heading: 'Marketplace Intel — ' + text,
+          summaryLines: [],
+          link: ''
+        };
+        continue;
+      }
+
+      // Short ALL-CAPS lines (e.g. "TOP 3 HEADLINES", "WIDER ROUNDUP") read
+      // as sub-section headers in this Doc, even though they're not styled
+      // as headings — render them as markdown headings so the structure
+      // survives on the page.
+      const isSubHeader = text.length < 60 && text === text.toUpperCase() && /[A-Z]/.test(text);
+      appendLine(isSubHeader ? ('### ' + text) : text);
+
+    } else if (type === DocumentApp.ElementType.LIST_ITEM) {
+      const item = child.asListItem();
+      const text = item.getText().trim();
+      if (!text) continue;
+      const isNumbered = item.getGlyphType() === DocumentApp.GlyphType.NUMBER;
+      appendLine((isNumbered ? '1. ' : '- ') + text);
     }
   }
   if (current) entries.push(current);
 
+  // Turn each entry's collected lines into a proper markdown body —
+  // blank line between blocks so paragraphs/headings/lists render
+  // correctly once Jekyll converts this file's markdown to HTML.
+  entries.forEach(e => {
+    e.summary = e.summaryLines.join('\n\n');
+    delete e.summaryLines;
+  });
+
   return entries;
+}
+
+function isBoldParagraph(para) {
+  const text = para.editAsText();
+  const full = text.getText();
+  if (!full || !full.trim()) return false;
+  const idx = full.search(/\S/);
+  const checkIndex = idx === -1 ? 0 : idx;
+  return text.isBold(checkIndex) === true;
 }
 
 function pushTextToGitHub(token, repo, branch, path, textContent, commitMessage) {
@@ -159,6 +230,7 @@ function pushTextToGitHub(token, repo, branch, path, textContent, commitMessage)
   });
 
   const code = response.getResponseCode();
+  Logger.log('GitHub response code for ' + path + ': ' + code);
   if (code >= 200 && code < 300) {
     Logger.log('Pushed successfully: ' + path);
   } else {
