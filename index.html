@@ -1,21 +1,325 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2685.4">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Marketplace Intelligence Briefing</title>
+<style>
+  :root {
+    --paper: #F6F4EE;
+    --paper-raised: #FFFFFF;
+    --ink: #1C1E22;
+    --ink-soft: #55585F;
+    --rule: #D9D4C6;
+    --navy: #1F3A5C;
+    --navy-soft: #6C859E;
+    --amber: #A9793C;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+  }
+
+  header.masthead {
+    border-bottom: 3px solid var(--ink);
+    padding: 2rem 1.5rem 1.25rem;
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
+  header.masthead .kicker {
+    font-size: 0.8rem;
+    color: var(--navy-soft);
+    margin-bottom: 0.35rem;
+  }
+
+  header.masthead h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 2.1rem;
+    margin: 0 0 0.35rem;
+    letter-spacing: -0.01em;
+  }
+
+  header.masthead p {
+    margin: 0;
+    color: var(--ink-soft);
+    font-size: 0.95rem;
+    max-width: 55ch;
+  }
+
+  nav.tabs {
+    max-width: 760px;
+    margin: 0 auto;
+    display: flex;
+    border-bottom: 1px solid var(--rule);
+    padding: 0 1.5rem;
+  }
+
+  nav.tabs button {
+    background: none;
+    border: none;
+    font-size: 0.95rem;
+    padding: 0.9rem 0.1rem;
+    margin-right: 1.75rem;
+    color: var(--ink-soft);
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    font-family: inherit;
+  }
+
+  nav.tabs button:hover { color: var(--ink); }
+
+  nav.tabs button.active {
+    color: var(--navy);
+    border-bottom-color: var(--navy);
+    font-weight: 600;
+  }
+
+  nav.tabs button:focus-visible {
+    outline: 2px solid var(--navy);
+    outline-offset: 2px;
+  }
+
+  main {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 1.75rem 1.5rem 4rem;
+  }
+
+  .panel { display: none; }
+  .panel.active { display: block; }
+
+  .panel .cadence {
+    font-size: 0.82rem;
+    color: var(--amber);
+    margin-bottom: 1.25rem;
+  }
+
+  article.entry {
+    background: var(--paper-raised);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    padding: 1.1rem 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  article.entry .date {
+    font-size: 0.78rem;
+    color: var(--navy-soft);
+    margin-bottom: 0.3rem;
+  }
+
+  article.entry h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.15rem;
+    margin: 0 0 0.4rem;
+  }
+
+  article.entry p {
+    margin: 0 0 0.5rem;
+    color: var(--ink-soft);
+    font-size: 0.95rem;
+  }
+
+  article.entry a {
+    font-size: 0.88rem;
+    color: var(--navy);
+  }
+
+  .tags {
+    margin: 0.5rem 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .tag {
+    font-size: 0.76rem;
+    color: var(--navy);
+    background: #EDF1F5;
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    padding: 0.12rem 0.5rem;
+    cursor: pointer;
+  }
+
+  .tag:hover { background: #E0E7EE; }
+
+  .tag.active {
+    background: var(--navy);
+    color: #fff;
+    border-color: var(--navy);
+  }
+
+  .empty {
+    color: var(--ink-soft);
+    font-size: 0.9rem;
+    font-style: italic;
+  }
+
+  .search-row {
+    max-width: 760px;
+    margin: 1rem auto 0;
+    padding: 0 1.5rem;
+  }
+
+  .search-row input {
+    width: 100%;
+    padding: 0.6rem 0.8rem;
+    font-size: 0.95rem;
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    background: var(--paper-raised);
+    color: var(--ink);
+    font-family: inherit;
+  }
+
+  .search-row input:focus-visible {
+    outline: 2px solid var(--navy);
+    outline-offset: 1px;
+  }
+
+  footer {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    color: var(--ink-soft);
+    font-size: 0.78rem;
+    border-top: 1px solid var(--rule);
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .panel.active { animation: fade-in 0.15s ease-out; }
+  }
+  @keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+</style>
 </head>
 <body>
-<p>Personal</p>
-<h1><b>Marketplace Intelligence Briefing</b></h1>
-<p>Three automated feeds, gathered on a schedule and dropped here as they land — my own reading list, not a team resource.</p>
-<p>Marketplace Intel</p>
-<p>Booker Group News</p>
-<p>Competitor Watch</p>
-<p><br></p>
-<p><br></p>
-<p>Not indexed by search engines. Direct link only — data refreshes automatically when each digest run completes.</p>
+
+<header class="masthead">
+  <div class="kicker">Personal — not the Marketplace team</div>
+  <h1>Marketplace Intelligence Briefing</h1>
+  <p>Three automated feeds, gathered on a schedule and dropped here as they land — my own reading list, not a team resource.</p>
+</header>
+
+<nav class="tabs" role="tablist">
+  <button class="tab-btn active" data-target="marketplace-intel" role="tab" aria-selected="true">Marketplace Intel</button>
+  <button class="tab-btn" data-target="booker-group-news" role="tab" aria-selected="false">Booker Group News</button>
+  <button class="tab-btn" data-target="competitor-watch" role="tab" aria-selected="false">Competitor Watch</button>
+</nav>
+
+<div class="search-row">
+  <input type="text" id="search-input" placeholder="Search this feed by keyword or tag&hellip;" autocomplete="off">
+</div>
+
+<main>
+  <section id="marketplace-intel" class="panel active"></section>
+  <section id="booker-group-news" class="panel"></section>
+  <section id="competitor-watch" class="panel"></section>
+</main>
+
+<footer>
+  Not indexed by search engines. Direct link only — data refreshes automatically when each digest run completes.
+</footer>
+
+<script>
+  const feeds = [
+    { id: "marketplace-intel", file: "data/marketplace-intel.json" },
+    { id: "booker-group-news", file: "data/booker-group-news.json" },
+    { id: "competitor-watch", file: "data/competitor-watch.json" }
+  ];
+
+  const feedData = {};   // id -> { title, cadence, entries }
+  let activeFeedId = "marketplace-intel";
+  let activeTag = null;
+  const searchInput = document.getElementById("search-input");
+
+  async function loadFeed(feed) {
+    const panel = document.getElementById(feed.id);
+    try {
+      const res = await fetch(feed.file, { cache: "no-store" });
+      const data = await res.json();
+      data.entries = (data.entries || []).map(e => ({ ...e, tags: e.tags || [] }));
+      feedData[feed.id] = data;
+      if (feed.id === activeFeedId) renderActivePanel();
+    } catch (err) {
+      panel.innerHTML = '<p class="empty">Could not load this feed yet.</p>';
+    }
+  }
+
+  function renderActivePanel() {
+    const panel = document.getElementById(activeFeedId);
+    const data = feedData[activeFeedId];
+    if (!data) return;
+
+    const cadence = data.cadence ? `<div class="cadence">${data.cadence}</div>` : "";
+
+    if (!data.entries.length) {
+      panel.innerHTML = cadence + '<p class="empty">No entries yet.</p>';
+      return;
+    }
+
+    const query = (searchInput.value || "").trim().toLowerCase();
+    const filtered = data.entries.filter(e => {
+      const matchesTag = !activeTag || e.tags.includes(activeTag);
+      if (!matchesTag) return false;
+      if (!query) return true;
+      const haystack = [e.heading, e.summary, ...(e.tags || [])].join(" ").toLowerCase();
+      return haystack.includes(query);
+    });
+
+    const sorted = [...filtered].sort((a, b) => (a.date < b.date ? 1 : -1));
+
+    if (!sorted.length) {
+      panel.innerHTML = cadence + '<p class="empty">Nothing matches that search.</p>';
+      return;
+    }
+
+    const items = sorted.map(e => `
+      <article class="entry">
+        <div class="date">${e.date}</div>
+        <h2>${e.heading}</h2>
+        <p>${e.summary}</p>
+        ${e.tags.length ? `<div class="tags">${e.tags.map(t => `<span class="tag${t === activeTag ? " active" : ""}" data-tag="${t}">${t}</span>`).join("")}</div>` : ""}
+        ${e.link ? `<a href="${e.link}" target="_blank" rel="noopener">Read the full doc &rarr;</a>` : ""}
+      </article>
+    `).join("");
+    panel.innerHTML = cadence + items;
+
+    panel.querySelectorAll(".tag").forEach(chip => {
+      chip.addEventListener("click", () => {
+        const tag = chip.dataset.tag;
+        activeTag = (activeTag === tag) ? null : tag;
+        renderActivePanel();
+      });
+    });
+  }
+
+  document.querySelectorAll(".tab-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      document.querySelectorAll(".tab-btn").forEach(b => { b.classList.remove("active"); b.setAttribute("aria-selected", "false"); });
+      document.querySelectorAll(".panel").forEach(p => p.classList.remove("active"));
+      btn.classList.add("active");
+      btn.setAttribute("aria-selected", "true");
+      activeFeedId = btn.dataset.target;
+      activeTag = null;
+      searchInput.value = "";
+      document.getElementById(activeFeedId).classList.add("active");
+      renderActivePanel();
+    });
+  });
+
+  searchInput.addEventListener("input", renderActivePanel);
+
+  feeds.forEach(loadFeed);
+</script>
+
 </body>
 </html>
