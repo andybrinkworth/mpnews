@@ -9,19 +9,19 @@ link: ""
 
 ### TOP 3 HEADLINES
 
-1. EU Commission scrutinises Amazon over suspected seller price-parity practices under the Digital Markets Act (first reported 18 Sept, continued coverage through 21 Sept)
+1\. EU Commission scrutinises Amazon over suspected seller price-parity practices under the Digital Markets Act (first reported 18 Sept, continued coverage through 21 Sept)
 
 Brussels is examining whether Amazon algorithmically suppresses the visibility of listings from third-party sellers who price lower on their own site or on competing platforms - the kind of "effective price parity" the DMA explicitly bans for gatekeepers. It's preliminary: no formal investigation or finding of wrongdoing yet.
 
 Why it matters: a different DMA angle from the Meta/Facebook Marketplace gatekeeper ruling already on record - here the target is Amazon's own ranking/visibility mechanics, closer to home for any marketplace that ranks sellers by price competitiveness.
 
-2. Amazon took a stake in Rappi, the Colombian delivery and quick-commerce platform (reported 19 Sept)
+2\. Amazon took a stake in Rappi, the Colombian delivery and quick-commerce platform (reported 19 Sept)
 
 Gives Amazon a foothold in Latin American last-mile delivery and local marketplace infrastructure rather than building it from scratch.
 
 Why it matters: another example of a dominant marketplace buying into local delivery/marketplace infrastructure instead of building it - relevant to how Booker Marketplace might think about build-vs-partner for fulfilment reach.
 
-3. Costco's delivery partnerships with Uber Eats and DoorDash went nationwide across the US (reported from 17 Sept, continuing into this window)
+3\. Costco's delivery partnerships with Uber Eats and DoorDash went nationwide across the US (reported from 17 Sept, continuing into this window)
 
 Both apps now offer same-day delivery from Costco warehouses nationwide, not just pilot markets.
 
