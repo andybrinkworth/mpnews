@@ -7,7 +7,7 @@ link: ""
 
 (Covering 15-18 September 2026, since the last digest entry - 15 September background)
 
-### TOP 3 HEADLINES
+### TOP 3
 
 1\. FTC expanded the Amazon Prime settlement redress programme (17 Sept)
 
