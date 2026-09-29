@@ -5,9 +5,9 @@ tags: ["amazon", "commission-model", "marketplace", "b2b", "ai", "kingfisher"]
 link: ""
 ---
 
-(Covering 19-22 September 2026, since the last digest, plus one 18 September story that broke too late for that entry)
+(Covering 19-22 September 2026, since the last digest, plus one 18 September story - the EU/Amazon pricing probe - that broke too late to make that entry.)
 
-### TOP 3 HEADLINES
+### TOP 3
 
 1\. EU Commission scrutinises Amazon over suspected seller price-parity practices under the Digital Markets Act (first reported 18 Sept, continued coverage through 21 Sept)
 
@@ -33,7 +33,7 @@ Why it matters: another big-box retailer routing fulfilment through third-party 
 
 - Amazon Accelerate 2026, Amazon's annual seller conference, opened in Seattle today (22 Sept) and runs through 24 Sept. Speakers are expected to cover Seller Central UI updates, an expanded AI Seller Assistant, and new data tools, but no concrete announcements had landed as of this digest - worth checking the next entry.
 
-- Kheops, a French retail-tech platform connecting independent stores directly with suppliers outside centralised purchasing groups, raised a EUR15m (~$17m) round (21 Sept) from Odyssee Venture, ISAI and Elaia. Order volume on its platform has quadrupled over the past year (revenue tripled) across 500+ stores and 3,000+ suppliers; it plans to use that data to recommend store-level assortments and anticipate ordering demand.
+- Kheops, a French retail-tech platform connecting independent stores directly with suppliers outside centralised purchasing groups, raised a €15m (~$17m) round (21 Sept) from Odyssée Venture, ISAI and Elaia. Order volume on its platform has quadrupled over the past year (revenue tripled) across 500+ stores and 3,000+ suppliers; it plans to use that data to recommend store-level assortments and anticipate ordering demand.
 
 - No new dated developments surfaced this window in the FTC v Amazon ad-pricing suit, the EU DMA Meta/Facebook Marketplace gatekeeper case, or Shein/Temu litigation - those remain as previously recorded.
 
