@@ -5,13 +5,13 @@ tags: ["amazon", "commission-model", "marketplace", "b2b", "ai"]
 link: ""
 ---
 
-(Covering 23-25 September 2026, since the last digest)
+(Covering 23-25 September 2026, since the last digest.)
 
-### TOP 3 HEADLINES
+### TOP 3
 
 1\. Amazon Accelerate 2026: Seller Central opens to Walmart, eBay, Shopify and TikTok (24 Sept)
 
-Amazon's annual seller conference produced its main announcement: independent sellers can now connect their Walmart, eBay, Shopify and TikTok Shop accounts to Seller Central, import and link listings, see orders from every channel in one place, and fulfil across platforms - free, rolling out to US sellers over the coming months. Syncing listings across channels, AI-generated cross-platform listings and a consolidated per-channel earnings view are planned next.
+Independent sellers can now connect their Walmart, eBay, Shopify and TikTok Shop accounts to Seller Central, import and link listings, see orders from every channel in one place, and fulfil across platforms - free, rolling out to US sellers over the coming months. Syncing listings across channels, AI-generated cross-platform listings and a consolidated per-channel earnings view are planned next.
 
 Why it matters: Amazon is repositioning Seller Central as the operating system for a seller's whole business, not just their Amazon storefront - useful competitive intelligence on how a dominant marketplace tries to make itself indispensable even to sellers who trade elsewhere too.
 
@@ -19,7 +19,7 @@ Why it matters: Amazon is repositioning Seller Central as the operating system f
 
 Amazon cut off Meta's Muse agent from shopping on Amazon.com over the weekend, saying Meta never disclosed Muse would access the site, that the agent doesn't identify itself when browsing, and that it captures customer credentials without clear consent. Two days later, at Accelerate, Amazon announced the opposite move for a partner it controls: a new plugin lets sellers manage their Amazon business through Anthropic's Claude or Amazon's own Quick assistant, with sellers choosing what data the agent can see and approving every action.
 
-Why it matters: Amazon is setting the rules for agentic commerce on its own marketplace - which AI agents may transact, on what terms, with what disclosure and consent. It has done the same to Perplexity, Google and OpenAI over the past year. Any marketplace, B2B included, will eventually need its own answer to "which AI agents can buy or sell on us, and how".
+Why it matters: Amazon is setting the rules for agentic commerce on its own marketplace - which AI agents may transact, on what terms, with what disclosure and consent. It has done the same to Perplexity, Google and OpenAI over the past year. Any marketplace, B2B included, will eventually need its own answer to "which AI agents can buy or sell on us, and how."
 
 3\. Instacart pushes retailers to cut online markups to grow grocery delivery adoption (reported 25 Sept)
 
