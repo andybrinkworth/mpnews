@@ -21,11 +21,11 @@ Issues: B&Q like-for-like sales fell 2.9% in H1, broadly in line with a soft DIY
 
 Links to find out more:
 
-- [Kingfisher raises annual profit outlook after strong H1 — RTÉ](https://www.rte.ie/news/business/2026/0922/1592489-kingfisher-half-year-results/)
+  - [Kingfisher raises annual profit outlook after strong H1 — RTÉ](https://www.rte.ie/news/business/2026/0922/1592489-kingfisher-half-year-results/)
 
-- [Kingfisher ups profit outlook as Screwfix offsets weak B&Q and France — AJ Bell](https://www.ajbell.co.uk/news/articles/kingfisher-ups-profit-outlook-screwfix-offsets-weak-bq-and-france)
+  - [Kingfisher ups profit outlook as Screwfix offsets weak B&Q and France — AJ Bell](https://www.ajbell.co.uk/news/articles/kingfisher-ups-profit-outlook-screwfix-offsets-weak-bq-and-france)
 
-- [Kingfisher H1 2026/27 slides: profit up 10%, guidance raised on trade — Investing.com](https://www.investing.com/news/company-news/kingfisher-h1-202627-slides-profit-up-10-guidance-raised-on-trade-93CH-4910201)
+  - [Kingfisher H1 2026/27 slides: profit up 10%, guidance raised on trade — Investing.com](https://www.investing.com/news/company-news/kingfisher-h1-202627-slides-profit-up-10-guidance-raised-on-trade-93CH-4910201)
 
 ### Next plc
 
@@ -59,9 +59,9 @@ Issues: None found.
 
 Links to find out more:
 
-- [Bidfood celebrates three years championing food and drink SMEs through its Open Doors Programme — Cash & Carry Management](https://cashandcarrymanagement.co.uk/bidfood-celebrates-three-years-of-supporting-smes-through-open-doors-programme/)
+  - [Bidfood celebrates three years championing food and drink SMEs through its Open Doors Programme — Cash & Carry Management](https://cashandcarrymanagement.co.uk/bidfood-celebrates-three-years-of-supporting-smes-through-open-doors-programme/)
 
-- [Bidfood celebrates three years championing food and drink SMEs through its Open Doors Programme — CLH News](https://catererlicensee.com/bidfood-celebrates-three-years-championing-food-and-drink-smes-through-its-open-doors-programme/)
+  - [Bidfood celebrates three years championing food and drink SMEs through its Open Doors Programme — CLH News](https://catererlicensee.com/bidfood-celebrates-three-years-championing-food-and-drink-smes-through-its-open-doors-programme/)
 
 ### Drinks Wholesalers
 
@@ -107,9 +107,9 @@ Issues: The Wholesale & Franchise division's underlying operating loss widened t
 
 Links to find out more:
 
-- [Co-op Wholesale revenue flat as 164 new stores open — SLR](https://www.slrmag.co.uk/co-op-wholesale-revenue-flat-as-164-new-stores-open/)
+  - [Co-op Wholesale revenue flat as 164 new stores open — SLR](https://www.slrmag.co.uk/co-op-wholesale-revenue-flat-as-164-new-stores-open/)
 
-- [Co-op reports increased losses and flat wholesale / franchise but forecasts H2 growth — Talking Retail](https://www.talkingretail.com/featured/co-op-reports-increased-losses-and-flat-wholesale-franchise-but-forecasts-h2-growth-23-09-2026/)
+  - [Co-op reports increased losses and flat wholesale / franchise but forecasts H2 growth — Talking Retail](https://www.talkingretail.com/featured/co-op-reports-increased-losses-and-flat-wholesale-franchise-but-forecasts-h2-growth-23-09-2026/)
 
 ### Costco UK
 
@@ -119,7 +119,7 @@ Issues: None found.
 
 Links to find out more:
 
-- [Costco UK members gain a new way to pay with Affirm — Affirm Holdings press release](https://investors.affirm.com/news-releases/news-release-details/costco-uk-members-gain-new-way-pay-affirm)
+  - [Costco UK members gain a new way to pay with Affirm — Affirm Holdings press release](https://investors.affirm.com/news-releases/news-release-details/costco-uk-members-gain-new-way-pay-affirm)
 
 ### JJ Foodservice
 
