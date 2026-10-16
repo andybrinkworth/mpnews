@@ -21,7 +21,7 @@ Issues: None found this week.
 
 Links to find out more:
 
-- [Kingfisher (KGF) RNS announcements — Investegate](https://www.investegate.co.uk/company/KGF)
+  - [Kingfisher (KGF) RNS announcements — Investegate](https://www.investegate.co.uk/company/KGF)
 
 ### Next plc
 
@@ -31,7 +31,7 @@ Issues: None found this week.
 
 Links to find out more:
 
-- [Next plc (NXT) RNS announcements — Investegate](https://www.investegate.co.uk/company/NXT)
+  - [Next plc (NXT) RNS announcements — Investegate](https://www.investegate.co.uk/company/NXT)
 
 ### BunzlOne
 
