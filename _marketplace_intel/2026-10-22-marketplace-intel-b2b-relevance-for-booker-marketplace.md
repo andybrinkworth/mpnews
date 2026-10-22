@@ -1,14 +1,14 @@
 ---
 title: "Marketplace Intel — B2B relevance for Booker Marketplace"
 date: 2026-10-22
-tags: ["amazon", "commission-model", "marketplace", "b2b", "ai"]
+tags: ["amazon", "marketplace", "b2b", "ai"]
 link: ""
 ---
 
-- Genuinely new, dated UK wholesale/B2B marketplace competitor news was thin again this window — nothing dated from Bestway, Nisa, Musgrave, Costco UK or Amazon Business UK turned up in the 23–25 September window, so this stays short by design rather than padded.
+- Genuinely new, dated UK wholesale/B2B marketplace competitor news was thin again this week — nothing dated from Bestway, Nisa, Musgrave, Costco UK or Amazon Business UK turned up in the 19–22 September window, so this stays short by design rather than padded.
 
-- The Muse-block/Claude-open contrast is the most relevant story this week: Amazon is now explicitly gatekeeping which AI agents can transact on its marketplace, requiring disclosure, consent and per-action approval from approved partners. As buyer-side procurement agents become more common in B2B too, Booker Marketplace will eventually need its own policy on which agents can place orders on suppliers' behalf, what data they can see, and how commission is attributed when the "buyer" is an AI acting for a wholesaler.
+- Kheops is the closest thing to a direct analogue this week: a platform whose whole pitch is connecting stores and suppliers outside traditional centralised purchasing, using the resulting order data to recommend assortments and anticipate demand. That data-driven assortment/demand angle is worth watching as a feature direction for Booker Marketplace, since it sits squarely in the "independent retailer plus supplier network" space Booker already occupies.
 
-- Amazon's multichannel Seller Central expansion is a reminder that platform stickiness increasingly comes from owning the seller's whole operational view, not just transaction volume on one channel. Worth asking whether a consolidated cross-channel view for Booker's suppliers (orders, listings, performance — even across non-Booker channels) could be a similar stickiness lever.
+- The Amazon–Rappi and Costco–Uber/DoorDash moves both point the same way: large platforms are increasingly buying or partnering into last-mile/delivery infrastructure rather than building it themselves. Worth keeping in mind for any conversation about how Booker Marketplace's own fulfilment model evolves.
 
-- Instacart's markup-reduction data is a useful external data point for any conversation about take-rate vs price transparency: retailers who kept prices undistorted online grew faster and retained customers better — relevant framing for how commission is presented to buyers on Booker Marketplace.
+- The EU's DMA scrutiny of Amazon's price-ranking mechanics is a reminder that how a marketplace ranks or surfaces sellers by price is now a live regulatory question in Europe, not just a UX/algorithm choice — relevant background if Booker Marketplace's own ranking or search logic ever weights price competitiveness heavily.
