@@ -1,16 +1,16 @@
 ---
 title: "Marketplace Intel — B2B relevance for Booker Marketplace"
 date: 2026-10-24
-tags: ["amazon", "marketplace", "b2b", "ai"]
+tags: ["amazon", "commission-model", "marketplace", "b2b", "ai"]
 link: ""
 ---
 
-- Genuinely new, dated UK wholesale/B2B marketplace competitor news was thin again this window — nothing dated from Bestway, Nisa, Musgrave, Costco UK or Amazon Business UK turned up in the 30 September–2 October window, so this stays short by design rather than padded.
+- Genuinely new, dated UK wholesale/B2B marketplace competitor news was thin again this window — nothing dated from Bestway, Nisa, Musgrave, Costco UK or Amazon Business UK turned up in the 26–29 September window, so this stays short by design rather than padded.
 
-- The UPS–TikTok Shop returns deal is the most directly transferable story this week: it shows a marketplace solving a hard operational problem (returns, fraud screening) by plugging into an established carrier's network rather than building bespoke tooling. Worth a look at whether Booker Marketplace's own returns/claims handling for suppliers could lean more on a managed third-party layer as order volume grows, rather than building it all in-house.
+- eBay's shipping-fee inconsistency (Final Value Fees charged on pass-through delivery costs in one programme but not another) is the most transferable point this week: it's a concrete illustration of how commission scope — goods value only, versus goods plus delivery/logistics recharges — needs to be applied consistently across a marketplace's own programmes, or it becomes a visible trust issue once sellers compare notes.
 
-- The agentic-commerce "years away" reporting is useful pacing context given how many agentic-commerce items this digest has tracked since August — it's a reason to keep watching the space without treating AI-agent readiness as an urgent near-term build priority, while still keeping product data and catalogue structure in reasonable shape for when it does mature.
+- The Depop drip-pricing litigation is a reminder to keep commission and any delivery/service charges visible early in the buyer journey rather than surfaced only at checkout — relevant wherever Booker Marketplace's own pricing stack adds charges on top of a supplier's headline price.
 
-- eBay's seller-engagement story is a governance reminder: as Booker Marketplace's supplier base grows, it's worth being deliberate about which feedback channels stay genuinely open rather than letting them quietly narrow to curated councils, especially since suppliers will notice the gap between what's said and what's actually accessible.
+- Temu/Shein's latest regulatory friction, this time in Colombia, is lower-relevance for a domestic B2B platform but useful macro context: de-minimis and duty-arbitrage fights are now recurring in multiple jurisdictions, a sign that cross-border cost structures for any marketplace remain politically unsettled.
 
-- The EU's confirmed 1 November per-item handling fee is low direct relevance to a domestic B2B platform, but is the third jurisdiction in under a month (after France and Colombia) tightening the economics of cheap cross-border imports — continuing evidence that low-cost-import competition is under sustained and broadening pressure globally, not just in any one market.
+- Adobe's more granular holiday forecast (versus the softer eMarketer figure already on record) is a useful input for Q4 commission revenue planning, and the stockpiling-of-essentials trend it flags is worth a look for category and delivery-capacity assumptions specifically.
