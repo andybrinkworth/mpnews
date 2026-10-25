@@ -1,12 +1,16 @@
 ---
 title: "Marketplace Intel — B2B relevance for Booker Marketplace"
 date: 2026-10-25
-tags: ["amazon", "marketplace", "b2b", "ai"]
+tags: ["amazon", "commission-model", "marketplace", "b2b", "ai"]
 link: ""
 ---
 
-- Genuinely new, dated UK wholesale/B2B marketplace competitor news was thin this week — nothing dated from Bestway, Nisa, Musgrave, Costco UK or Amazon Business UK turned up in the 15–18 September window, so this section is short by design rather than padded.
+- Amazon Business's reconciliation/line-item upgrade is worth a direct look — invoice and finance-reconciliation friction is a classic reason B2B buyers resist marketplace consolidation, and it's a fair benchmark for Booker Marketplace's own buyer experience.
 
-- The one transferable point is eBay's move to ring-fence a new selling format (livestream) from its core seller-standards scoring: as Booker Marketplace adds features, categories or supplier cohorts, keeping performance metrics format-aware — rather than blending everything into a single score — avoids penalising genuine experimentation by suppliers trying something new.
+- Faire's move into non-retail/business-use buyers is a useful analogue: it shows a commission marketplace can grow GMV by relaxing buyer-eligibility rules rather than only adding SKUs or sellers — worth asking whether there are adjacent non-traditional buyer segments not yet served.
 
-- Lowe's folding its marketplace into a combined retail-media/digital-commerce remit is a small but relevant governance signal for any B2B platform still settling where marketplace sits organisationally relative to commercial and digital teams.
+- Shopify's WebMCP and Amazon/Instacart's agentic assistants all point the same direction: AI agents will increasingly search catalogues and place orders on a buyer's behalf. For a B2B marketplace that raises real questions about product-data structure, API/agent-readiness of the catalogue, and how commission/pricing logic should behave when the "buyer" is a bot acting for a wholesaler.
+
+- The softer 2026 holiday demand forecast is a useful input for Q4 commission revenue planning — growth assumptions built on last year's holiday uplift may be optimistic.
+
+A note on scope: dedicated hard news specific to UK wholesale/grocery marketplaces was thin this week — most current coverage of Bestway, Nisa, Musgrave and Costco UK is operational/supply-deal news rather than marketplace-model news. The closest genuinely relevant items (Amazon Business, Faire) are included above rather than forcing a UK headline that isn't there. Two items — Shopify's WebMCP (launched 5 Aug) and Faire's non-retail expansion (piloted from April) — sit slightly outside the strict 3–4 day window, but they are the most recent substantive developments in those threads and are still being actively covered and rolled out this week.
