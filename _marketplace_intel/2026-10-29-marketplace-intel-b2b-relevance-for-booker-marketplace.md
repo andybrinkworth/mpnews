@@ -1,16 +1,16 @@
 ---
 title: "Marketplace Intel — B2B relevance for Booker Marketplace"
 date: 2026-10-29
-tags: ["amazon", "commission-model", "marketplace", "b2b", "ai"]
+tags: ["amazon", "marketplace", "b2b", "ai"]
 link: ""
 ---
 
-- Genuinely new, dated UK wholesale/B2B marketplace competitor news was thin again this window — nothing dated from Bestway, Nisa, Musgrave, Costco UK or Amazon Business UK turned up in the 30 September–6 October window, so this stays short by design rather than padded.
+- Genuinely new, dated UK wholesale/B2B marketplace competitor news was thin again this window — nothing dated from Bestway, Nisa, Musgrave, Costco UK or Amazon Business UK turned up in the 30 September–2 October window, so this stays short by design rather than padded.
 
-- DoorDash's corporate MCP connector is the standout item this week: a live, named example of agentic ordering built for procurement rather than consumer shopping, with a simple consent model — each employee signs into their own account and approves the connection before an agent can order for them. Worth watching as a possible shape for how Booker Marketplace eventually handles AI agents ordering on a wholesaler's behalf: who signs off, and how commission is attributed when the "buyer" is an agent.
+- The UPS–TikTok Shop returns deal is the most directly transferable story this week: it shows a marketplace solving a hard operational problem (returns, fraud screening) by plugging into an established carrier's network rather than building bespoke tooling. Worth a look at whether Booker Marketplace's own returns/claims handling for suppliers could lean more on a managed third-party layer as order volume grows, rather than building it all in-house.
 
-- DoorDash's "Dasher Returns" is the second marketplace this month — after UPS–Happy Returns/TikTok Shop, covered in the last digest — to productise reverse logistics as a paid add-on rather than build it bespoke. Two separate, unrelated platforms reaching for the same solution in the same fortnight is worth noting if Booker's own returns/claims handling needs to scale.
+- The agentic-commerce "years away" reporting is useful pacing context given how many agentic-commerce items this digest has tracked since August — it's a reason to keep watching the space without treating AI-agent readiness as an urgent near-term build priority, while still keeping product data and catalogue structure in reasonable shape for when it does mature.
 
-- eBay's unannounced fee rise is a reminder that marketplaces sometimes change take-rate economics quietly rather than through a clear update — worth keeping in mind given Booker's commission model depends on supplier trust in how and when charges change.
+- eBay's seller-engagement story is a governance reminder: as Booker Marketplace's supplier base grows, it's worth being deliberate about which feedback channels stay genuinely open rather than letting them quietly narrow to curated councils, especially since suppliers will notice the gap between what's said and what's actually accessible.
 
-- Temu's UK numbers and the confirmed-but-distant (2028) closure of the UK's own low-value import exemption are useful domestic context: the cheapest import channel is under the same long-term pressure here as everywhere else already tracked in this digest, just on a longer fuse.
+- The EU's confirmed 1 November per-item handling fee is low direct relevance to a domestic B2B platform, but is the third jurisdiction in under a month (after France and Colombia) tightening the economics of cheap cross-border imports — continuing evidence that low-cost-import competition is under sustained and broadening pressure globally, not just in any one market.
