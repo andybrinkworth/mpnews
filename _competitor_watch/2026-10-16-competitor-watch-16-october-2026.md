@@ -21,11 +21,11 @@ Issues: Current CEO Thierry Garnier, who has led Kingfisher for seven years (and
 
 Links to find out more:
 
-  - [Kingfisher Appoints New CEO — Kingfisher press release](https://www.kingfisher.com/media/news/2026/kingfisher-appoints-new-ceo)
+- [Kingfisher Appoints New CEO — Kingfisher press release](https://www.kingfisher.com/media/news/2026/kingfisher-appoints-new-ceo)
 
-  - [Kingfisher hires Sebastian Gundel as CEO as Garnier departs for Ahold — AJ Bell](https://www.ajbell.co.uk/news/articles/kingfisher-hires-sebastian-gundel-ceo-garnier-departs-ahold)
+- [Kingfisher hires Sebastian Gundel as CEO as Garnier departs for Ahold — AJ Bell](https://www.ajbell.co.uk/news/articles/kingfisher-hires-sebastian-gundel-ceo-garnier-departs-ahold)
 
-  - [Kingfisher (KGF) RNS announcements — Investegate](https://www.investegate.co.uk/company/KGF)
+- [Kingfisher (KGF) RNS announcements — Investegate](https://www.investegate.co.uk/company/KGF)
 
 ### Next plc
 
