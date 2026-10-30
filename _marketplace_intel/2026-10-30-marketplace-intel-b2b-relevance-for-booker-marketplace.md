@@ -1,16 +1,16 @@
 ---
 title: "Marketplace Intel — B2B relevance for Booker Marketplace"
 date: 2026-10-30
-tags: ["amazon", "commission-model", "marketplace", "b2b", "ai"]
+tags: ["mirakl", "amazon", "commission-model", "marketplace", "b2b", "ai"]
 link: ""
 ---
 
-- Genuinely new, dated UK wholesale/B2B marketplace competitor news was thin again this window — nothing dated from Bestway, Nisa, Musgrave, Costco UK or Amazon Business UK turned up in the 16–20 October window, so this stays short by design rather than padded.
+- Genuinely new, dated UK wholesale/B2B marketplace competitor news was thin again this window — nothing dated from Bestway, Nisa, Musgrave, Costco UK or Amazon Business UK turned up in the 14–16 October window, so this stays short by design rather than padded. (One piece of UK-adjacent coverage found this week was explicitly speculative — a trade-press forecast that Costco UK will likely join an on-demand delivery marketplace like Uber Eats or Deliveroo by March 2027 — and is flagged here only as a thing to watch for, not as news that's happened.)
 
-- Amazon Business's NACo county contract is the one to study directly: it shows a dominant commission marketplace wrapping itself in a publicly-solicited, member-governed cooperative framework — complete with price ceilings and a local-supplier preference mechanism — to win institutional buyers who might otherwise default to formal tendering. Worth asking whether a similar framework-agreement structure could help Booker Marketplace compete for buyer segments (local authorities, housing associations, public-sector-adjacent buyers) that currently default to formal procurement routes rather than open marketplace buying.
+- The Mirakl/NVIDIA item is the one to actually act on, not just note: it's the clearest sign yet that AI-assisted catalogue/product-data onboarding is moving from Mirakl roadmap talk into a claimed, shipping capability. Worth finding out directly from Mirakl whether and when faster onboarding tooling becomes available on Booker Marketplace's own instance, particularly with supplier onboarding volume likely to rise ahead of peak trading.
 
-- The USPS Ground Advantage repricing is a reminder that carrier-level, geography-based rate changes can move seller/supplier shipping economics with little warning and little initial clarity even from the marketplace passing them on — worth checking how exposed Booker's own delivery partners and suppliers are to postcode/zone-based rate shifts, particularly heading into peak.
+- Texas's move to reclassify marketplace fees as commissions rather than taxable services is a reminder that the tax treatment of a marketplace's own take-rate is not settled or uniform even within one country, let alone across jurisdictions — worth keeping half an eye on in case a similar question (is a marketplace commission a service fee, a disbursement, or something else) ever becomes live for HMRC or equivalent UK treatment of Booker's own supplier charges.
 
-- eBay's AI-training disclosure update is a governance point worth banking rather than acting on immediately: as platforms formalise how buyer/seller data trains AI models, Booker Marketplace will likely need its own clear, supplier-facing position on this before it becomes a live trust question, rather than reacting after the fact.
+- StockX Live's card-break disclosure rules (and the parallel gambling-related legal exposure Whatnot is fighting over the same mechanic) are a transferable governance lesson: any new promotional or gamified selling format a marketplace adds needs clear, written seller disclosure rules before launch, not after a dispute — relevant if Booker Marketplace ever experiments with bundled, auction-style or promotional selling formats.
 
-- The upcoming earnings window (eBay and Etsy, 28 Oct; Amazon, 29 Oct) and Amazon Business's Reshape conference (27–28 Oct) are both worth flagging for the next digest — between them they're the most likely source of substantial new marketplace data and B2B announcements after a genuinely quiet window.
+- The Amazon FTC monopolisation trial holding its March 2027 date, and the ad-auction suit running in parallel, are now a steady background condition rather than a new risk — worth noting mainly because it continues to shape how aggressively sellers diversify away from relying on any single dominant marketplace.
