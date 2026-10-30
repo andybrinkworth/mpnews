@@ -23,9 +23,9 @@ Notable: Kingfisher announced the outcome of its statutory audit tender on 17 Se
 
 Links to find out more:
 
-  - [Outcome of Audit Tender — Investegate/RNS](https://www.investegate.co.uk/announcement/rns/kingfisher--kgf/outcome-of-audit-tender/9777428)
+- [Outcome of Audit Tender — Investegate/RNS](https://www.investegate.co.uk/announcement/rns/kingfisher--kgf/outcome-of-audit-tender/9777428)
 
-  - [Kingfisher financial calendar](https://www.kingfisher.com/investors/financial-calendar)
+- [Kingfisher financial calendar](https://www.kingfisher.com/investors/financial-calendar)
 
 ### Next plc
 
@@ -35,9 +35,9 @@ Issues: Next flagged a slowdown in UK consumer spending for the second half, cit
 
 Links to find out more:
 
-  - [Next raises full year profit guidance after 'better than expected' first half — Retail Bulletin](https://www.theretailbulletin.com/general-merchandise/next-raises-full-year-profit-guidance-after-better-than-expected-first-half-17-09-2026/)
+- [Next raises full year profit guidance after 'better than expected' first half — Retail Bulletin](https://www.theretailbulletin.com/general-merchandise/next-raises-full-year-profit-guidance-after-better-than-expected-first-half-17-09-2026/)
 
-  - [Next raises profit guidance again, flags slowdown in H2 sales growth — Investing.com](https://www.investing.com/news/earnings/next-raises-profit-guidance-again-flags-slowdown-in-h2-sales-growth-shares-rise-4904902)
+- [Next raises profit guidance again, flags slowdown in H2 sales growth — Investing.com](https://www.investing.com/news/earnings/next-raises-profit-guidance-again-flags-slowdown-in-h2-sales-growth-shares-rise-4904902)
 
 ### BunzlOne
 
@@ -63,7 +63,7 @@ Issues: None found.
 
 Links to find out more:
 
-  - [Bidfood locks prices on almost 200 products for four months with launch of Price Wise — Cash & Carry Management](https://cashandcarrymanagement.co.uk/bidfood-locks-prices-on-almost-200-products-with-launch-of-price-wise/)
+- [Bidfood locks prices on almost 200 products for four months with launch of Price Wise — Cash & Carry Management](https://cashandcarrymanagement.co.uk/bidfood-locks-prices-on-almost-200-products-with-launch-of-price-wise/)
 
 ### Drinks Wholesalers
 
@@ -83,7 +83,7 @@ Issues: None found.
 
 Links to find out more:
 
-  - [Drinks wholesaler expands with acquisition of Wigan Beer Company — The Business Desk](https://www.thebusinessdesk.com/northwest/news/2178409-north-west-drinks-wholesaler-expands-with-acquisition-of-wigan-beer-company/)
+- [Drinks wholesaler expands with acquisition of Wigan Beer Company — The Business Desk](https://www.thebusinessdesk.com/northwest/news/2178409-north-west-drinks-wholesaler-expands-with-acquisition-of-wigan-beer-company/)
 
 ### Bibendum
 
@@ -111,9 +111,9 @@ Issues: None found.
 
 Links to find out more:
 
-  - [Co-op Wholesale celebrates new Nisa store opening in Congleton — Wholesale Manager](https://wholesalemanager.co.uk/co-op-wholesale-celebrates-new-nisa-store-opening-in-congleton/)
+- [Co-op Wholesale celebrates new Nisa store opening in Congleton — Wholesale Manager](https://wholesalemanager.co.uk/co-op-wholesale-celebrates-new-nisa-store-opening-in-congleton/)
 
-  - [Co-op Wholesale celebrates new Nisa store opening in Bassingbourn — C-Talk](https://c-talk.co.uk/new-nisa-store-bassingbourn)
+- [Co-op Wholesale celebrates new Nisa store opening in Bassingbourn — C-Talk](https://c-talk.co.uk/new-nisa-store-bassingbourn)
 
 ### Costco UK
 
