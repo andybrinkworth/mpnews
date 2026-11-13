@@ -101,29 +101,27 @@ Links to find out more: None this week.
 
 ### Nisa (Co-op Wholesale)
 
-Success: Co-op Wholesale reported interim results on 24 September 2026 (H1 2026). Wholesale & Franchise revenue held flat at £683m, with 164 new stores opened and £142m of new business agreements secured — plus a further £280m pipeline through to year-end. The Nisa rebrand has now been rolled out to 25 stores, with 100 more planned this year as part of what the company calls a "long-term reset" of the wholesale operation. Interim chief executive Kate Allum said 2026 is "looking like a year of two halves" and pointed to improving customer metrics for H2.
-
-Issues: The Wholesale & Franchise division's underlying operating loss widened to £13m, from £10m a year earlier, as part of a group-wide underlying operating loss that widened to £45m (from £32m), even as total group revenue rose 2.4% to £5.6bn.
-
-Links to find out more:
-
-- [Co-op Wholesale revenue flat as 164 new stores open — SLR](https://www.slrmag.co.uk/co-op-wholesale-revenue-flat-as-164-new-stores-open/)
-
-- [Co-op reports increased losses and flat wholesale / franchise but forecasts H2 growth — Talking Retail](https://www.talkingretail.com/featured/co-op-reports-increased-losses-and-flat-wholesale-franchise-but-forecasts-h2-growth-23-09-2026/)
-
-### Costco UK
-
-Success: Costco UK expanded its partnership with buy-now-pay-later provider Affirm on 15 September 2026, letting members split purchases into interest-free or interest-bearing monthly instalments at checkout. Note: this falls just before our last cutoff and wasn't picked up in last week's digest, so it's included here with its exact date rather than left unreported.
+Success: Co-op Wholesale opened two new Nisa convenience stores this week: in Congleton, Cheshire (14 September 2026, a 1,500 sq ft store run by existing multi-site operator Martin Corban) and in Bassingbourn, near Royston (15 September 2026, a 1,200 sq ft store run by new operator Aysel Gok). Routine network growth via independent retailer sign-ups.
 
 Issues: None found.
 
 Links to find out more:
 
-- [Costco UK members gain a new way to pay with Affirm — Affirm Holdings press release](https://investors.affirm.com/news-releases/news-release-details/costco-uk-members-gain-new-way-pay-affirm)
+- [Co-op Wholesale celebrates new Nisa store opening in Congleton — Wholesale Manager](https://wholesalemanager.co.uk/co-op-wholesale-celebrates-new-nisa-store-opening-in-congleton/)
+
+- [Co-op Wholesale celebrates new Nisa store opening in Bassingbourn — C-Talk](https://c-talk.co.uk/new-nisa-store-bassingbourn)
+
+### Costco UK
+
+Success: No UK-specific news found this week.
+
+Issues: None found.
+
+Links to find out more: None this week.
 
 ### JJ Foodservice
 
-Success: No news within the last 7 days.
+Success: No news within the last 7 days. (Checked reports of a "Future Partners" supplier programme relaunch — this actually dates to 27 May 2026, tied to the JJ Connect conference on 9 October 2026, so it is not new this week; flagging here only to avoid re-reporting it later as fresh.)
 
 Issues: None found.
 
