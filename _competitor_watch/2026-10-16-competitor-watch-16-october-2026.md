@@ -29,7 +29,7 @@ Links to find out more:
 
 ### Next plc
 
-Success: No new news found this week.
+Success: No new news this week.
 
 Issues: None found this week.
 
