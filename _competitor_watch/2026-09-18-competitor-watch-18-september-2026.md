@@ -105,15 +105,11 @@ Links to find out more: None this week.
 
 ### Nisa (Co-op Wholesale)
 
-Success: Co-op Wholesale opened two new Nisa convenience stores this week: in Congleton, Cheshire (14 September 2026, a 1,500 sq ft store run by existing multi-site operator Martin Corban) and in Bassingbourn, near Royston (15 September 2026, a 1,200 sq ft store run by new operator Aysel Gok). Routine network growth via independent retailer sign-ups.
+Success: No new news this week.
 
-Issues: None found.
+Issues: None found this week.
 
-Links to find out more:
-
-- [Co-op Wholesale celebrates new Nisa store opening in Congleton — Wholesale Manager](https://wholesalemanager.co.uk/co-op-wholesale-celebrates-new-nisa-store-opening-in-congleton/)
-
-- [Co-op Wholesale celebrates new Nisa store opening in Bassingbourn — C-Talk](https://c-talk.co.uk/new-nisa-store-bassingbourn)
+Links to find out more: None this week.
 
 ### Costco UK
 
@@ -125,7 +121,7 @@ Links to find out more: None this week.
 
 ### JJ Foodservice
 
-Success: No news within the last 7 days. (Checked reports of a "Future Partners" supplier programme relaunch — this actually dates to 27 May 2026, tied to the JJ Connect conference on 9 October 2026, so it is not new this week; flagging here only to avoid re-reporting it later as fresh.)
+Success: No news within the last 7 days.
 
 Issues: None found.
 
