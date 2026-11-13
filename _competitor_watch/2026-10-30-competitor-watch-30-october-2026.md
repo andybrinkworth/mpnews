@@ -113,7 +113,7 @@ Links to find out more: None this week.
 
 ### Costco UK
 
-Success: No confirmed, dated news within the last 7 days. The ongoing, undated story about plans for up to 14 new UK warehouses (including a confirmed site under construction in Gloucester) continued to circulate in search results this week, but without a fresh dated update, so it isn't reported here as new.
+Success: No confirmed, dated news found within the last 7 days. The ongoing, undated story about plans for up to 14 new UK warehouses (including a confirmed site under construction in Gloucester) continued to circulate in search results this week, but without a fresh dated update, so it isn't reported here as new.
 
 Issues: None found.
 
