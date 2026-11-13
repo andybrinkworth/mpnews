@@ -1,16 +1,16 @@
 ---
 title: "Marketplace Intel — B2B relevance for Booker Marketplace"
 date: 2026-11-13
-tags: ["mirakl", "commission-model", "marketplace", "b2b", "ma", "ai"]
+tags: ["marketplace", "b2b", "ma", "ai"]
 link: ""
 ---
 
-- The CarParts.com/Mirakl story is the one to raise internally rather than just note: a distribution partner threatening to cut off a supplier over a competing marketplace that supplier built is a live channel-conflict scenario on the exact platform Booker Marketplace runs on. Worth checking whether any Booker suppliers trading through other marketplaces could trigger, or face, the same dynamic as Booker's own third-party seller base scales.
+- eBay's PUDO build-out is the one to study directly: its own job postings admit the US lacks the dense physical drop-off network it needs, and the plan is pointedly similar to the drop-off/fulfilment use of retail stores that GameStop's Ryan Cohen proposed in his rejected takeover bid. Booker's own depot network is a comparable physical asset — worth asking whether it could double as pickup, drop-off or returns infrastructure for Booker Marketplace rather than being used purely for stock distribution.
 
-- eBay quietly ranking an owned-but-separate acquisition (Depop) ahead of its own paying sellers' ads is a governance lesson worth banking: as Booker Marketplace's catalogue and supplier base grow, any future decision to privilege one channel, brand or supplier in search or ranking is worth making deliberately and transparently, rather than letting sellers discover it themselves.
+- ThredUp's "wholly irrational" complaint about rival marketing and shipping-subsidy spending is a useful cautionary data point, with real numbers behind it: a venture-funded competitor spending heavily on acquisition and shipping subsidies can visibly squeeze an established platform's growth and margin guidance even while its own usage metrics improve. Worth bearing in mind if a subsidy-funded entrant ever targets Booker's buyer or supplier base on price or delivery cost alone.
 
-- eBay's walked-back "new" AI press release is a second example this digest has tracked (after Etsy's two-day messaging reversal) of a marketplace's own external communications outrunning what's actually shipped — a reminder to keep supplier- and buyer-facing announcements accurate to what's genuinely new, not just newly re-promoted.
+- Etsy's two-day reversal on messaging advice — telling sellers to do something that conflicts with its own published policy, then retracting it — is a governance lesson this digest keeps returning to. Any supplier-facing guidance Booker sends out is worth checking against its own stated policies before it goes out, since sellers who follow official advice in good faith can still be caught by automated enforcement.
 
-- USPS's confirmed January 2027 rate rise and permanent fuel surcharge are worth folding into any delivery-cost assumptions for Booker's supplier base now, given how consistently carrier-level increases have fed through to marketplace seller economics across eBay, Etsy and Poshmark this year.
+- eBay making its managed-balance payout system mandatory, paired with a new seller-financing tie-up (Fundbox), shows a marketplace embedding payments and working-capital products directly into the seller relationship rather than leaving it to outside banks — a stickiness and monetisation lever worth watching as a direction for Booker's own supplier relationships.
 
-- TikTok Shop's and eBay's parallel moves to wrap commerce in paid, loyalty-style membership tiers and warranty-style guarantees (the Plus pilot; the £5 Condition Guarantee) are both examples of marketplaces monetising trust and convenience directly, on top of standard commission — a pattern worth watching as a possible lever for Booker Marketplace's own buyer relationship over time.
+- The FTC's personalised-pricing information requests to Walmart, Target and two delivery marketplaces are a reminder that dynamic or personalised pricing based on customer data is drawing regulatory attention before any wrongdoing is even alleged — relevant background if Booker's own pricing logic ever varies by buyer-specific data.
