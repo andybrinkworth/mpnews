@@ -97,23 +97,29 @@ Links to find out more: None this week.
 
 ### Nisa (Co-op Wholesale)
 
-Success: No new news this week beyond the interim results covered in the 25 September digest (published 24 September 2026).
+Success: Co-op Wholesale reported interim results on 24 September 2026 (H1 2026). Wholesale & Franchise revenue held flat at £683m, with 164 new stores opened and £142m of new business agreements secured — plus a further £280m pipeline through to year-end. The Nisa rebrand has now been rolled out to 25 stores, with 100 more planned this year as part of what the company calls a "long-term reset" of the wholesale operation. Interim chief executive Kate Allum said 2026 is "looking like a year of two halves" and pointed to improving customer metrics for H2.
 
-Issues: None found this week.
+Issues: The Wholesale & Franchise division's underlying operating loss widened to £13m, from £10m a year earlier, as part of a group-wide underlying operating loss that widened to £45m (from £32m), even as total group revenue rose 2.4% to £5.6bn.
 
-Links to find out more: None this week — see the 25 September entry for the interim results detail.
+Links to find out more:
+
+- [Co-op Wholesale revenue flat as 164 new stores open — SLR](https://www.slrmag.co.uk/co-op-wholesale-revenue-flat-as-164-new-stores-open/)
+
+- [Co-op reports increased losses and flat wholesale / franchise but forecasts H2 growth — Talking Retail](https://www.talkingretail.com/featured/co-op-reports-increased-losses-and-flat-wholesale-franchise-but-forecasts-h2-growth-23-09-2026/)
 
 ### Costco UK
 
-Success: No news within the last 7 days.
+Success: Costco UK expanded its partnership with buy-now-pay-later provider Affirm on 15 September 2026, letting members split purchases into interest-free or interest-bearing monthly instalments at checkout. Note: this falls just before our last cutoff and wasn't picked up in last week's digest, so it's included here with its exact date rather than left unreported.
 
 Issues: None found.
 
-Links to find out more: None this week.
+Links to find out more:
+
+- [Costco UK members gain a new way to pay with Affirm — Affirm Holdings press release](https://investors.affirm.com/news-releases/news-release-details/costco-uk-members-gain-new-way-pay-affirm)
 
 ### JJ Foodservice
 
-Success: No news within the last 7 days. (Checked two items that surfaced in search: the Nottingham branch opening (1 September 2026) and a TikTok Shop pilot launch (19 August 2026) — both predate this week's window, so not reported as new.)
+Success: No news within the last 7 days.
 
 Issues: None found.
 
