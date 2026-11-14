@@ -5,12 +5,10 @@ tags: ["amazon", "commission-model", "marketplace", "b2b", "ai"]
 link: ""
 ---
 
-- Genuinely new, dated UK wholesale/B2B marketplace competitor news was thin again this window — nothing dated from Bestway, Nisa, Musgrave, Costco UK or Amazon Business UK turned up in the 26–29 September window, so this stays short by design rather than padded.
+- Genuinely new, dated UK wholesale/B2B marketplace competitor news was thin again this window — nothing dated from Bestway, Nisa, Musgrave, Costco UK or Amazon Business UK turned up in the 23–25 September window, so this stays short by design rather than padded.
 
-- eBay's shipping-fee inconsistency (Final Value Fees charged on pass-through delivery costs in one programme but not another) is the most transferable point this week: it's a concrete illustration of how commission scope — goods value only, versus goods plus delivery/logistics recharges — needs to be applied consistently across a marketplace's own programmes, or it becomes a visible trust issue once sellers compare notes.
+- The Muse-block/Claude-open contrast is the most relevant story this week: Amazon is now explicitly gatekeeping which AI agents can transact on its marketplace, requiring disclosure, consent and per-action approval from approved partners. As buyer-side procurement agents become more common in B2B too, Booker Marketplace will eventually need its own policy on which agents can place orders on suppliers' behalf, what data they can see, and how commission is attributed when the "buyer" is an AI acting for a wholesaler.
 
-- The Depop drip-pricing litigation is a reminder to keep commission and any delivery/service charges visible early in the buyer journey rather than surfaced only at checkout — relevant wherever Booker Marketplace's own pricing stack adds charges on top of a supplier's headline price.
+- Amazon's multichannel Seller Central expansion is a reminder that platform stickiness increasingly comes from owning the seller's whole operational view, not just transaction volume on one channel. Worth asking whether a consolidated cross-channel view for Booker's suppliers (orders, listings, performance — even across non-Booker channels) could be a similar stickiness lever.
 
-- Temu/Shein's latest regulatory friction, this time in Colombia, is lower-relevance for a domestic B2B platform but useful macro context: de-minimis and duty-arbitrage fights are now recurring in multiple jurisdictions, a sign that cross-border cost structures for any marketplace remain politically unsettled.
-
-- Adobe's more granular holiday forecast (versus the softer eMarketer figure already on record) is a useful input for Q4 commission revenue planning, and the stockpiling-of-essentials trend it flags is worth a look for category and delivery-capacity assumptions specifically.
+- Instacart's markup-reduction data is a useful external data point for any conversation about take-rate vs price transparency: retailers who kept prices undistorted online grew faster and retained customers better — relevant framing for how commission is presented to buyers on Booker Marketplace.
