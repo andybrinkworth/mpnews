@@ -1,22 +1,20 @@
 ---
 title: "Marketplace Intel — Wider roundup"
 date: 2026-11-14
-tags: ["mirakl", "amazon", "commission-model", "marketplace", "ai"]
+tags: ["amazon", "commission-model", "marketplace", "b2b", "ai"]
 link: ""
 ---
 
-- TikTok Shop: Seller Center navigation overhaul (7 Sept) plus new order-packaging and shipping/fulfilment policies (published 3 Sept); Sephora confirmed exclusive product drops on TikTok Shop (4 Sept) — more evidence mainstream/premium brands are normalising social commerce.
+- eBay's 11 November press release describing its "Magical Listing" photo-to-listing AI as a "new camera-first experience" was quietly revised after being challenged — the capability itself was announced on eBay's February 2026 earnings call and has been rolling out since March 2025, reaching all new US sellers by 28 October; eBay's PR agency said the release "focuses on expanding availability," and the headline and "new" wording were removed from the live page with no correction notice, while sellers on Reddit reported listing-flow problems and VAR's own test on 11 November found the tool misidentifying a sea-turtle mousepad as a fridge magnet.
 
-- Amazon: Price History extended from 90 days to a full year, so shoppers can see genuine discount patterns; Alexa for Shopping gained an "Update Me When" proactive-alert feature (1–4 Sept), part of Amazon's push into always-on agentic shopping. Amazon Accelerate (its annual seller conference) runs 22–24 Sept in Seattle — expect further seller-tool and fee announcements then.
+- eBay launched a £5 Electronics Condition Guarantee in the UK (11 November) covering selected used Apple, Samsung and Google phones and iPads priced £50+: buyers pay £5 for a pre-delivery inspection against 40+ condition points (including battery health, screen, camera, ports and IMEI/activation-lock checks) at an eBay facility, with a full refund (fee included) if a device fails; it's a direct answer to Vinted's existing £5 Electronics Verification, though eBay's version doesn't yet cover gaming consoles as Vinted's does, and it's unclear from eBay's own guidance who covers the seller-to-facility shipping cost.
 
-- eBay (UK): Global Shipping Programme fully replaced by "International Shipping"; Fitment Plus Auto rolling out for vehicle-fitment listings, with third-party MyFitment API access closing 30 Sept.
+- Mattel brought Barbie, Hot Wheels, Fisher-Price and Monster High to TikTok Shop for the first time (11 November), launching with around 20 products (expanding to 40+), aimed explicitly at adult collectors and parents (TikTok requires users to be 13+) rather than children, as part of a wider push by big-name brands — Best Buy, Ulta and Sephora are also joining TikTok Shop for the 2026 holidays.
 
-- Shopify: WebMCP support is now live on all Liquid storefronts (and the Hydrogen preview), letting AI agents search catalogues, manage carts and check out directly against a merchant's site without scraping — a serious infrastructure move toward "agent-callable" commerce, developed jointly with Google and Microsoft.
+- Catching up on an item missed by the last digest: TikTok Shop has quietly begun piloting "TikTok Shop Plus," a paid membership tier at $9.99/month (after a 30-day free trial) for an initial pool of over 1 million of its most active US shoppers, offering free shipping on badged items, an extra 10% off on selected products and monthly coupons — positioned against Amazon Prime ($14.99/month) and Walmart+ ($12.95/month) ahead of the holiday season (reported 9 November).
 
-- Faire: continuing to broaden its marketplace beyond resale-only buyers, now serving hotels, offices and other non-retail business buyers (piloted with ~5,000 buyers before wider rollout) — a notable buyer-side expansion for a commission marketplace.
+- No new dated developments surfaced this window in the FTC v Amazon ad-auction pricing suit, the FTC's separate Amazon monopolisation case, the EU DMA Meta/Facebook Marketplace gatekeeper case, the EU Commission's Amazon price-parity probe, France's fast-fashion levy, or the DoorDash–Instacart deal's antitrust review (Uber's CEO said on 4 November that some merchants are already concerned about the combined company's share of US online delivery, but no regulatory timeline has been set) — those all remain as previously recorded.
 
-- Kohl's reported digital sales growth aided by AI shopping tools even as overall Q2 sales declined — an early proof point that AI-assisted discovery/conversion can offset broader softness.
+- Genuinely new, dated UK wholesale/B2B marketplace competitor news was thin again this window — nothing dated from Bestway, Nisa, Musgrave, Costco UK or Amazon Business UK turned up in the 11–13 November window, so this stays short by design rather than padded.
 
-- Mirakl: recent commentary from its chief customer officer (via Retail Week) reframes marketplaces as "a tool, not a strategy" — a useful challenge for any team mid-build.
-
-- Macro: eMarketer's 2026 holiday forecast projects a comparatively soft season — roughly 2.6% overall retail growth and 6.6% ecommerce growth — the second consecutive year holiday growth has trailed the annual average, as shoppers spread spending out.
+- Walmart reports Q3 2026 results on 19 November — flagged again for the next digest.
