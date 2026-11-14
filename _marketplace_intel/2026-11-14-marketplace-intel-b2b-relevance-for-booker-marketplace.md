@@ -1,16 +1,14 @@
 ---
 title: "Marketplace Intel — B2B relevance for Booker Marketplace"
 date: 2026-11-14
-tags: ["amazon", "commission-model", "marketplace", "b2b", "ai", "personalisation"]
+tags: ["amazon", "commission-model", "marketplace", "b2b", "ai"]
 link: ""
 ---
 
-- Amazon Business's two Reshape launches are the most directly transferable items this week: the Value Intelligence benchmarking tool in particular is a concrete answer to "how do we prove this marketplace is worth it beyond price," which is exactly the pitch a commission-model B2B platform needs for buyers whose finance teams want evidence, not just a lower unit cost.
+- eBay's second round of cuts, taken while revenue is growing at 15%, is a reminder that mature marketplaces are increasingly treating headcount and commission-funded investment as something to concentrate deliberately on a few growth bets (for eBay: C2C, AI, Live, Vehicles) rather than spread evenly — worth asking what Booker Marketplace's own equivalent short list of "where the next pound of investment goes" looks like as it scales.
 
-- Amazon's AWS-driven capex surge (to roughly $220bn for the year, with free cash flow now deeply negative) and its slowing ad-revenue growth are a reminder that even the largest marketplace's financial story is now being written by AI infrastructure spending rather than retail/marketplace fundamentals — worth bearing in mind when benchmarking Booker's own commission economics against "what Amazon does," since Amazon's own incentives are increasingly pointed elsewhere.
+- Etsy's AI-content and photo-authenticity rules are the most directly transferable item this week: a clear, enforced, no-grace-period line between AI-assisted and misrepresented listings. As Booker's supplier base and product catalogue grow — and as AI tools for generating product copy and imagery become more common among smaller suppliers — having an explicit, published position on what's allowed (and a detection/enforcement mechanism, not just a policy page) is worth getting ahead of rather than reacting to once it becomes a buyer-trust issue.
 
-- Etsy's return to buyer growth, credited to personalisation and search-relevance work rather than a pricing or fee change, is a useful proof point for Booker: better discovery and search, not just commission structure, can directly move active-buyer numbers.
+- Meta's unresolved AI-training terms are now the second running example (after eBay's own AI-training disclosure update, covered two digests ago) of a major platform's AI-and-data position being genuinely unclear even to the trade press days before it takes effect. Continuing to treat Booker's own supplier/buyer data-and-AI policy as something to define clearly and early — rather than letting ambiguity become the story — remains the right lesson to bank from this thread.
 
-- TikTok Shop Malaysia's category-by-category commission changes — raising rates on discretionary goods while cutting them on essentials and holding staples at zero — is a transferable commission-design pattern: differentiating take-rate by category to protect low-margin essentials while capturing more from discretionary spend is a lever worth considering as Booker's own commission schedule matures.
-
-- Genuinely new, dated UK wholesale/B2B marketplace competitor news was thin again this window — nothing dated from Bestway, Nisa, Musgrave, Costco UK or Amazon Business UK turned up in the 28–30 October window, so this stays short by design rather than padded.
+- The upcoming earnings window (eBay and Etsy, 28 Oct; Amazon, 29 Oct) and Amazon Business's Reshape conference (27–28 Oct, under way now) remain the most likely near-term sources of substantial new marketplace data and B2B announcements — flagged again for the next digest.
