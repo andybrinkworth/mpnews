@@ -1,16 +1,16 @@
 ---
 title: "Marketplace Intel — B2B relevance for Booker Marketplace"
 date: 2026-11-14
-tags: ["amazon", "commission-model", "marketplace", "b2b", "ai"]
+tags: ["mirakl", "commission-model", "marketplace", "b2b", "ma", "ai"]
 link: ""
 ---
 
-- Amazon Business's reconciliation/line-item upgrade is worth a direct look — invoice and finance-reconciliation friction is a classic reason B2B buyers resist marketplace consolidation, and it's a fair benchmark for Booker Marketplace's own buyer experience.
+- The CarParts.com/Mirakl story is the one to raise internally rather than just note: a distribution partner threatening to cut off a supplier over a competing marketplace that supplier built is a live channel-conflict scenario on the exact platform Booker Marketplace runs on. Worth checking whether any Booker suppliers trading through other marketplaces could trigger, or face, the same dynamic as Booker's own third-party seller base scales.
 
-- Faire's move into non-retail/business-use buyers is a useful analogue: it shows a commission marketplace can grow GMV by relaxing buyer-eligibility rules rather than only adding SKUs or sellers — worth asking whether there are adjacent non-traditional buyer segments not yet served.
+- eBay quietly ranking an owned-but-separate acquisition (Depop) ahead of its own paying sellers' ads is a governance lesson worth banking: as Booker Marketplace's catalogue and supplier base grow, any future decision to privilege one channel, brand or supplier in search or ranking is worth making deliberately and transparently, rather than letting sellers discover it themselves.
 
-- Shopify's WebMCP and Amazon/Instacart's agentic assistants all point the same direction: AI agents will increasingly search catalogues and place orders on a buyer's behalf. For a B2B marketplace that raises real questions about product-data structure, API/agent-readiness of the catalogue, and how commission/pricing logic should behave when the "buyer" is a bot acting for a wholesaler.
+- eBay's walked-back "new" AI press release is a second example this digest has tracked (after Etsy's two-day messaging reversal) of a marketplace's own external communications outrunning what's actually shipped — a reminder to keep supplier- and buyer-facing announcements accurate to what's genuinely new, not just newly re-promoted.
 
-- The softer 2026 holiday demand forecast is a useful input for Q4 commission revenue planning — growth assumptions built on last year's holiday uplift may be optimistic.
+- USPS's confirmed January 2027 rate rise and permanent fuel surcharge are worth folding into any delivery-cost assumptions for Booker's supplier base now, given how consistently carrier-level increases have fed through to marketplace seller economics across eBay, Etsy and Poshmark this year.
 
-A note on scope: dedicated hard news specific to UK wholesale/grocery marketplaces was thin this week — most current coverage of Bestway, Nisa, Musgrave and Costco UK is operational/supply-deal news rather than marketplace-model news. The closest genuinely relevant items (Amazon Business, Faire) are included above rather than forcing a UK headline that isn't there. Two items — Shopify's WebMCP (launched 5 Aug) and Faire's non-retail expansion (piloted from April) — sit slightly outside the strict 3–4 day window, but they are the most recent substantive developments in those threads and are still being actively covered and rolled out this week.
+- TikTok Shop's and eBay's parallel moves to wrap commerce in paid, loyalty-style membership tiers and warranty-style guarantees (the Plus pilot; the £5 Condition Guarantee) are both examples of marketplaces monetising trust and convenience directly, on top of standard commission — a pattern worth watching as a possible lever for Booker Marketplace's own buyer relationship over time.
