@@ -1,16 +1,14 @@
 ---
 title: "Marketplace Intel — B2B relevance for Booker Marketplace"
 date: 2026-11-17
-tags: ["amazon", "commission-model", "marketplace", "b2b", "ai"]
+tags: ["amazon", "marketplace", "b2b", "ai"]
 link: ""
 ---
 
-- Amazon Business's reconciliation/line-item upgrade is worth a direct look — invoice and finance-reconciliation friction is a classic reason B2B buyers resist marketplace consolidation, and it's a fair benchmark for Booker Marketplace's own buyer experience.
+- eBay's Shipping-as-a-Service and Authentication-as-a-Service build is the one to study directly: it's a working example of a marketplace turning its own trust and logistics infrastructure into a product sold to rival platforms. Worth asking whether any part of Booker's own infrastructure — supplier verification, depot network, delivery capability — could have a similar second life as a service sold beyond Booker Marketplace itself, the way eBay is now doing with Depop and other third parties.
 
-- Faire's move into non-retail/business-use buyers is a useful analogue: it shows a commission marketplace can grow GMV by relaxing buyer-eligibility rules rather than only adding SKUs or sellers — worth asking whether there are adjacent non-traditional buyer segments not yet served.
+- Amazon's World Product Graph plan sharpens a question this digest keeps returning to: as AI agents increasingly mediate product discovery, owning complete, accurate product data becomes a competitive asset in its own right, not just a nice-to-have. Worth another look at how complete and AI-readable Booker's own supplier catalogue is, independent of how any individual buyer currently shops.
 
-- Shopify's WebMCP and Amazon/Instacart's agentic assistants all point the same direction: AI agents will increasingly search catalogues and place orders on a buyer's behalf. For a B2B marketplace that raises real questions about product-data structure, API/agent-readiness of the catalogue, and how commission/pricing logic should behave when the "buyer" is a bot acting for a wholesaler.
+- Faire's move from "vanity metrics" toward reorder-rate and retention discipline, on the way to its first EBITDA breakeven and a possible IPO, is the most directly transferable lesson this week for a B2B marketplace: the metrics that mattered in a growth-at-all-costs phase (sign-ups, GMV headlines) are not necessarily the ones that signal a healthy, investable platform — reorder rates and genuine retailer retention are. Worth checking which of these Booker already tracks as leading indicators, and which it doesn't yet.
 
-- The softer 2026 holiday demand forecast is a useful input for Q4 commission revenue planning — growth assumptions built on last year's holiday uplift may be optimistic.
-
-A note on scope: dedicated hard news specific to UK wholesale/grocery marketplaces was thin this week — most current coverage of Bestway, Nisa, Musgrave and Costco UK is operational/supply-deal news rather than marketplace-model news. The closest genuinely relevant items (Amazon Business, Faire) are included above rather than forcing a UK headline that isn't there. Two items — Shopify's WebMCP (launched 5 Aug) and Faire's non-retail expansion (piloted from April) — sit slightly outside the strict 3–4 day window, but they are the most recent substantive developments in those threads and are still being actively covered and rolled out this week.
+- The USPS and Amazon fee threads, taken together, are a reminder to keep delivery and fulfilment cost assumptions for Booker's own supplier base current heading into the new year, given how consistently carrier- and platform-level fee rises have fed through to marketplace seller economics across this entire digest's run.
