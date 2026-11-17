@@ -1,22 +1,24 @@
 ---
 title: "Marketplace Intel — Wider roundup"
 date: 2026-11-17
-tags: ["mirakl", "amazon", "commission-model", "marketplace", "ai"]
+tags: ["amazon", "commission-model", "marketplace", "b2b", "ma", "ai"]
 link: ""
 ---
 
-- TikTok Shop: Seller Center navigation overhaul (7 Sept) plus new order-packaging and shipping/fulfilment policies (published 3 Sept); Sephora confirmed exclusive product drops on TikTok Shop (4 Sept) — more evidence mainstream/premium brands are normalising social commerce.
+- Amazon announced fulfilment-fee increases for 2027 (5 November, missed by the 6 November digest): FBA fees rise by an average of $0.19 per unit (about 0.8% of average item price) from 15 January 2027, once the current holiday peak-fee period ends on 14 January; a second set of changes — to storage, low-inventory-level and AWD/multi-channel distribution fees — follows from 1 February 2027, with AWD age-based storage changes from 1 March. Small standard-size items see the largest rises (up to $0.70 for items over $50); low-value items (under $10) in five categories — automotive and powersports, compact appliances, musical instruments/AV production, media, and computers — lose access to Amazon's low-price FBA rates; bulky and extra-large size tiers are being subdivided further, and the existing 3.5% fuel and logistics surcharge is being extended to more services.
 
-- Amazon: Price History extended from 90 days to a full year, so shoppers can see genuine discount patterns; Alexa for Shopping gained an "Update Me When" proactive-alert feature (1–4 Sept), part of Amazon's push into always-on agentic shopping. Amazon Accelerate (its annual seller conference) runs 22–24 Sept in Seattle — expect further seller-tool and fee announcements then.
+- USPS has proposed a new 20% postage-error fee alongside expanded package-compliance and nonstandard-package charges (reported 14 November) — another addition to the carrier-cost thread this digest has tracked closely all autumn, on top of the confirmed 11% permanent fuel surcharge and roughly 5.9–7.9% average rate rises already recorded for 17 January 2027.
 
-- eBay (UK): Global Shipping Programme fully replaced by "International Shipping"; Fitment Plus Auto rolling out for vehicle-fitment listings, with third-party MyFitment API access closing 30 Sept.
+- Mercari's US business saw GMV growth stall to just 0.3% as rival shipping promotions hit fashion-category sales (reported 14 November) — a smaller-scale echo of the "wholly irrational" subsidy spending ThredUp's CEO criticised two digests ago, and a reminder that the resale-marketplace shipping price war is still actively reshaping category-level sales, not just overall growth rates.
 
-- Shopify: WebMCP support is now live on all Liquid storefronts (and the Hydrogen preview), letting AI agents search catalogues, manage carts and check out directly against a merchant's site without scraping — a serious infrastructure move toward "agent-callable" commerce, developed jointly with Google and Microsoft.
+- eBay's new AI Return Assistant is reportedly steering some genuine item-not-as-described claims toward "buyer's remorse" resolutions instead (reported 15 November), which can leave buyers without the protections a correctly-classified INAD claim would carry — the kind of AI-mediated policy enforcement worth watching given this digest's repeated governance theme, from Etsy's messaging-policy reversal to eBay's own "new" AI press release two digests ago.
 
-- Faire: continuing to broaden its marketplace beyond resale-only buyers, now serving hotels, offices and other non-retail business buyers (piloted with ~5,000 buyers before wider rollout) — a notable buyer-side expansion for a commission marketplace.
+- 1stDibs named Bradford Shellhammer as its new CEO and cut commissions on luxury handbags, watches and jewellery (reported 16 November), aimed at attracting more high-value inventory onto the platform — a small but clear example of category-specific commission-rate cuts as a seller-acquisition lever, a pattern this digest has flagged before (TikTok Shop Malaysia's category-by-category rate changes, 30 October).
 
-- Kohl's reported digital sales growth aided by AI shopping tools even as overall Q2 sales declined — an early proof point that AI-assisted discovery/conversion can offset broader softness.
+- Texas's proposed repeal of its marketplace-fee "data processing" tax (Rule 3.330) had its public-comment period close on 15 November; no outcome had been published as this digest was compiled, so it's flagged again for the next entry rather than assumed.
 
-- Mirakl: recent commentary from its chief customer officer (via Retail Week) reframes marketplaces as "a tool, not a strategy" — a useful challenge for any team mid-build.
+- No new dated developments surfaced this window in the FTC v Amazon ad-auction pricing suit, the FTC's separate Amazon monopolisation case, the EU DMA Meta/Facebook Marketplace gatekeeper case, the EU Commission's Amazon price-parity probe, France's fast-fashion levy, or the DoorDash–Instacart deal's antitrust review — those all remain as previously recorded.
 
-- Macro: eMarketer's 2026 holiday forecast projects a comparatively soft season — roughly 2.6% overall retail growth and 6.6% ecommerce growth — the second consecutive year holiday growth has trailed the annual average, as shoppers spread spending out.
+- Genuinely new, dated UK wholesale/B2B marketplace competitor news was thin again this window — nothing dated from Bestway, Nisa, Musgrave, Costco UK or Amazon Business UK turned up in the 14–17 November window, so this stays short by design rather than padded.
+
+- Walmart reports Q3 2026 results on 19 November — flagged again for the next digest.
