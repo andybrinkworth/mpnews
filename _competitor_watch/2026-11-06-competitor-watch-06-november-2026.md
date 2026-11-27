@@ -21,7 +21,7 @@ Issues: None found this week.
 
 Links to find out more:
 
-- [Kingfisher (KGF) RNS announcements — Investegate](https://www.investegate.co.uk/company/KGF)
+- Kingfisher (KGF) RNS announcements — Investegate: https://www.investegate.co.uk/company/KGF
 
 ### Next plc
 
@@ -31,11 +31,11 @@ Issues: UK trading softened. UK full-price sales growth slowed to 2.0% in the qu
 
 Links to find out more:
 
-- [Next's quarterly sales beat guidance on strong overseas sales — RTÉ](https://www.rte.ie/news/business/2026/1105/1598050-next-quarterly-results/)
+- Next's quarterly sales beat guidance on strong overseas sales — RTÉ: https://www.rte.ie/news/business/2026/1105/1598050-next-quarterly-results/
 
-- [Next reveals slower demand from UK shoppers but international sales surge — ITV News](https://www.itv.com/news/2026-11-05/next-reveals-slower-demand-from-uk-shoppers-but-international-sales-surge)
+- Next reveals slower demand from UK shoppers but international sales surge — ITV News: https://www.itv.com/news/2026-11-05/next-reveals-slower-demand-from-uk-shoppers-but-international-sales-surge
 
-- [Next plc (NXT) RNS announcements — Investegate](https://www.investegate.co.uk/company/NXT)
+- Next plc (NXT) RNS announcements — Investegate: https://www.investegate.co.uk/company/NXT
 
 ### BunzlOne
 
