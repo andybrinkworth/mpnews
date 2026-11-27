@@ -21,7 +21,7 @@ Issues: None found this week.
 
 Links to find out more:
 
-- [Kingfisher (KGF) RNS announcements — Investegate](https://www.investegate.co.uk/company/KGF)
+- Kingfisher (KGF) RNS announcements — Investegate: https://www.investegate.co.uk/company/KGF
 
 ### Next plc
 
@@ -31,7 +31,7 @@ Issues: None found this week.
 
 Links to find out more:
 
-- [Next plc (NXT) RNS announcements — Investegate](https://www.investegate.co.uk/company/NXT)
+- Next plc (NXT) RNS announcements — Investegate: https://www.investegate.co.uk/company/NXT
 
 ### BunzlOne
 
@@ -57,7 +57,7 @@ Issues: None found.
 
 Links to find out more:
 
-- [Bidfood reveals food trends for 2027 — Better Wholesaling](https://www.betterwholesaling.com/bidfood-reveals-food-trends-for-2027/)
+- Bidfood reveals food trends for 2027 — Better Wholesaling: https://www.betterwholesaling.com/bidfood-reveals-food-trends-for-2027/
 
 ### Drinks Wholesalers
 
@@ -103,9 +103,9 @@ Issues: The Wholesale & Franchise division's underlying operating loss widened t
 
 Links to find out more:
 
-- [Co-op Wholesale revenue flat as 164 new stores open — SLR](https://www.slrmag.co.uk/co-op-wholesale-revenue-flat-as-164-new-stores-open/)
+- Co-op Wholesale revenue flat as 164 new stores open — SLR: https://www.slrmag.co.uk/co-op-wholesale-revenue-flat-as-164-new-stores-open/
 
-- [Co-op reports increased losses and flat wholesale / franchise but forecasts H2 growth — Talking Retail](https://www.talkingretail.com/featured/co-op-reports-increased-losses-and-flat-wholesale-franchise-but-forecasts-h2-growth-23-09-2026/)
+- Co-op reports increased losses and flat wholesale / franchise but forecasts H2 growth — Talking Retail: https://www.talkingretail.com/featured/co-op-reports-increased-losses-and-flat-wholesale-franchise-but-forecasts-h2-growth-23-09-2026/
 
 ### Costco UK
 
@@ -115,7 +115,7 @@ Issues: None found.
 
 Links to find out more:
 
-- [Costco UK members gain a new way to pay with Affirm — Affirm Holdings press release](https://investors.affirm.com/news-releases/news-release-details/costco-uk-members-gain-new-way-pay-affirm)
+- Costco UK members gain a new way to pay with Affirm — Affirm Holdings press release: https://investors.affirm.com/news-releases/news-release-details/costco-uk-members-gain-new-way-pay-affirm
 
 ### JJ Foodservice
 
