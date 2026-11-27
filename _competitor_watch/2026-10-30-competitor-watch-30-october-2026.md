@@ -21,7 +21,7 @@ Issues: None found this week.
 
 Links to find out more:
 
-- [Kingfisher (KGF) RNS announcements — Investegate](https://www.investegate.co.uk/company/KGF)
+- Kingfisher (KGF) RNS announcements — Investegate: https://www.investegate.co.uk/company/KGF
 
 ### Next plc
 
@@ -31,7 +31,7 @@ Issues: None found this week.
 
 Links to find out more:
 
-- [Next plc (NXT) RNS announcements — Investegate](https://www.investegate.co.uk/company/NXT)
+- Next plc (NXT) RNS announcements — Investegate: https://www.investegate.co.uk/company/NXT
 
 ### BunzlOne
 
@@ -67,11 +67,11 @@ Issues: Distribution revenue — the segment MCB sits within — fell around 4% 
 
 Links to find out more:
 
-- [C&C Group announces restructure after mixed H1 results — Grocery Gazette](https://www.grocerygazette.co.uk/2026/10/28/cc-group-announces-restructure-after-mixed-h1-results/)
+- C&C Group announces restructure after mixed H1 results — Grocery Gazette: https://www.grocerygazette.co.uk/2026/10/28/cc-group-announces-restructure-after-mixed-h1-results/
 
-- [C&C completes Matthew Clark and Bibendum integration into MCB — Vinetur](https://www.vinetur.com/en/20261028109920/cc-completes-matthew-clark-and-bibendum-integration-into-mcb.html)
+- C&C completes Matthew Clark and Bibendum integration into MCB — Vinetur: https://www.vinetur.com/en/20261028109920/cc-completes-matthew-clark-and-bibendum-integration-into-mcb.html
 
-- [Acquisition and Trading Update, 11 September 2026 — Investegate](https://www.investegate.co.uk/announcement/rns/c-c-group-cdi---ccr/acquisition-and-trading-update/9766652)
+- Acquisition and Trading Update, 11 September 2026 — Investegate: https://www.investegate.co.uk/announcement/rns/c-c-group-cdi---ccr/acquisition-and-trading-update/9766652
 
 ### LWC Drinks
 
@@ -81,9 +81,9 @@ Issues: None found.
 
 Links to find out more:
 
-- [Old J Spiced Rum unveils biggest brand refresh since launch ahead of 15th anniversary — Retail Times](https://retailtimes.co.uk/old-j-spiced-rum-unveils-biggest-brand-refresh-since-launch-ahead-of-15th-anniversary/)
+- Old J Spiced Rum unveils biggest brand refresh since launch ahead of 15th anniversary — Retail Times: https://retailtimes.co.uk/old-j-spiced-rum-unveils-biggest-brand-refresh-since-launch-ahead-of-15th-anniversary/
 
-- [Old J Spiced Rum unveils refreshed brand identity ahead of 15th year — LWC Drinks](https://www.lwc-drinks.co.uk/old-j-spiced-rum-unveils-refreshed-brand-identity-ahead-of-15th-year/)
+- Old J Spiced Rum unveils refreshed brand identity ahead of 15th year — LWC Drinks: https://www.lwc-drinks.co.uk/old-j-spiced-rum-unveils-refreshed-brand-identity-ahead-of-15th-year/
 
 ### Bibendum
 
@@ -107,7 +107,7 @@ Links to find out more: None this week.
 
 Success: No new news this week. Nearest item: a new Nisa store opened in Ollerton, reported 19 October 2026, which predates this week's window.
 
-Issues: None found this week.
+Issues: None found.
 
 Links to find out more: None this week.
 
