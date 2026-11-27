@@ -23,7 +23,7 @@ Issues: None found this period.
 
 Links to find out more:
 
-- [Kingfisher (KGF) RNS announcements — Investegate](https://www.investegate.co.uk/company/KGF)
+- Kingfisher (KGF) RNS announcements — Investegate: https://www.investegate.co.uk/company/KGF
 
 ### Next plc
 
@@ -57,7 +57,7 @@ Issues: Trading conditions tightened as the period progressed, with subdued cons
 
 Links to find out more:
 
-- [Bidcorp grows trading profit despite subdued consumer spending — Business Day](https://www.businessday.co.za/companies/2026-11-10-bidcorp-grows-trading-profit-despite-subdued-consumer-spending/)
+- Bidcorp grows trading profit despite subdued consumer spending — Business Day: https://www.businessday.co.za/companies/2026-11-10-bidcorp-grows-trading-profit-despite-subdued-consumer-spending/
 
 ### Drinks Wholesalers
 
@@ -77,7 +77,7 @@ Issues: None found.
 
 Links to find out more:
 
-- [Beaujolais Nouveau: Everything You Need to Know About France's Most Anticipated Wine Release — LWC Drinks](https://www.lwc-drinks.co.uk/beaujolais-nouveau-everything-you-need-to-know-about-frances-most-anticipated-wine-release/)
+- Beaujolais Nouveau: Everything You Need to Know About France's Most Anticipated Wine Release — LWC Drinks: https://www.lwc-drinks.co.uk/beaujolais-nouveau-everything-you-need-to-know-about-frances-most-anticipated-wine-release/
 
 ### Bibendum
 
